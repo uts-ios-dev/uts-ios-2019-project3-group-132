@@ -12,7 +12,6 @@
 		9634398D229664D4000CEA6E /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9634398B229664D4000CEA6E /* Main.storyboard */; };
 		96343990229664D4000CEA6E /* GroupMaker.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 9634398E229664D4000CEA6E /* GroupMaker.xcdatamodeld */; };
 		96343992229664D5000CEA6E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 96343991229664D5000CEA6E /* Assets.xcassets */; };
-		96343995229664D5000CEA6E /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 96343993229664D5000CEA6E /* LaunchScreen.storyboard */; };
 		963439A0229664D5000CEA6E /* GroupMakerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9634399F229664D5000CEA6E /* GroupMakerTests.swift */; };
 		963439AB229664D5000CEA6E /* GroupMakerUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 963439AA229664D5000CEA6E /* GroupMakerUITests.swift */; };
 /* End PBXBuildFile section */
@@ -41,7 +40,6 @@
 		9634398C229664D4000CEA6E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		9634398F229664D4000CEA6E /* GroupMaker.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = GroupMaker.xcdatamodel; sourceTree = "<group>"; };
 		96343991229664D5000CEA6E /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		96343994229664D5000CEA6E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		96343996229664D5000CEA6E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		9634399B229664D5000CEA6E /* GroupMakerTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = GroupMakerTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		9634399F229664D5000CEA6E /* GroupMakerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GroupMakerTests.swift; sourceTree = "<group>"; };
@@ -99,13 +97,10 @@
 		96343986229664D4000CEA6E /* GroupMaker */ = {
 			isa = PBXGroup;
 			children = (
-				96343987229664D4000CEA6E /* AppDelegate.swift */,
-				96343989229664D4000CEA6E /* ViewController.swift */,
-				9634398B229664D4000CEA6E /* Main.storyboard */,
-				96343991229664D5000CEA6E /* Assets.xcassets */,
-				96343993229664D5000CEA6E /* LaunchScreen.storyboard */,
-				96343996229664D5000CEA6E /* Info.plist */,
-				9634398E229664D4000CEA6E /* GroupMaker.xcdatamodeld */,
+				FF4EAE552296716300C40B47 /* Settings */,
+				FF4EAE54229670EA00C40B47 /* Controller */,
+				FF4EAE52229670DE00C40B47 /* View */,
+				FF4EAE51229670BC00C40B47 /* Model */,
 			);
 			path = GroupMaker;
 			sourceTree = "<group>";
@@ -126,6 +121,40 @@
 				963439AC229664D5000CEA6E /* Info.plist */,
 			);
 			path = GroupMakerUITests;
+			sourceTree = "<group>";
+		};
+		FF4EAE51229670BC00C40B47 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				96343991229664D5000CEA6E /* Assets.xcassets */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		FF4EAE52229670DE00C40B47 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				9634398B229664D4000CEA6E /* Main.storyboard */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		FF4EAE54229670EA00C40B47 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				96343989229664D4000CEA6E /* ViewController.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		FF4EAE552296716300C40B47 /* Settings */ = {
+			isa = PBXGroup;
+			children = (
+				96343996229664D5000CEA6E /* Info.plist */,
+				9634398E229664D4000CEA6E /* GroupMaker.xcdatamodeld */,
+				96343987229664D4000CEA6E /* AppDelegate.swift */,
+			);
+			path = Settings;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -232,7 +261,6 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				96343995229664D5000CEA6E /* LaunchScreen.storyboard in Resources */,
 				96343992229664D5000CEA6E /* Assets.xcassets in Resources */,
 				9634398D229664D4000CEA6E /* Main.storyboard in Resources */,
 			);
@@ -303,14 +331,6 @@
 				9634398C229664D4000CEA6E /* Base */,
 			);
 			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
-		96343993229664D5000CEA6E /* LaunchScreen.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				96343994229664D5000CEA6E /* Base */,
-			);
-			name = LaunchScreen.storyboard;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */
