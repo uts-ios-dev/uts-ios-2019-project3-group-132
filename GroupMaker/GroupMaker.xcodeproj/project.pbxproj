@@ -8,12 +8,16 @@
 
 /* Begin PBXBuildFile section */
 		96343988229664D4000CEA6E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96343987229664D4000CEA6E /* AppDelegate.swift */; };
-		9634398A229664D4000CEA6E /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96343989229664D4000CEA6E /* ViewController.swift */; };
 		9634398D229664D4000CEA6E /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9634398B229664D4000CEA6E /* Main.storyboard */; };
 		96343990229664D4000CEA6E /* GroupMaker.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 9634398E229664D4000CEA6E /* GroupMaker.xcdatamodeld */; };
 		96343992229664D5000CEA6E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 96343991229664D5000CEA6E /* Assets.xcassets */; };
 		963439A0229664D5000CEA6E /* GroupMakerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9634399F229664D5000CEA6E /* GroupMakerTests.swift */; };
 		963439AB229664D5000CEA6E /* GroupMakerUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 963439AA229664D5000CEA6E /* GroupMakerUITests.swift */; };
+		F261EC7E229C01DD00C483D1 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F261EC7D229C01DD00C483D1 /* MainViewController.swift */; };
+		F261EC80229C031700C483D1 /* GroupViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F261EC7F229C031700C483D1 /* GroupViewController.swift */; };
+		F261EC82229C037100C483D1 /* MyProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F261EC81229C037100C483D1 /* MyProfileViewController.swift */; };
+		F261EC84229C037F00C483D1 /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F261EC83229C037F00C483D1 /* ProfileViewController.swift */; };
+		F261EC86229C040B00C483D1 /* PeopleViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F261EC85229C040B00C483D1 /* PeopleViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -36,7 +40,6 @@
 /* Begin PBXFileReference section */
 		96343984229664D4000CEA6E /* GroupMaker.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GroupMaker.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		96343987229664D4000CEA6E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		96343989229664D4000CEA6E /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		9634398C229664D4000CEA6E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		9634398F229664D4000CEA6E /* GroupMaker.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = GroupMaker.xcdatamodel; sourceTree = "<group>"; };
 		96343991229664D5000CEA6E /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -47,6 +50,11 @@
 		963439A6229664D5000CEA6E /* GroupMakerUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = GroupMakerUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		963439AA229664D5000CEA6E /* GroupMakerUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GroupMakerUITests.swift; sourceTree = "<group>"; };
 		963439AC229664D5000CEA6E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		F261EC7D229C01DD00C483D1 /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
+		F261EC7F229C031700C483D1 /* GroupViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GroupViewController.swift; sourceTree = "<group>"; };
+		F261EC81229C037100C483D1 /* MyProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyProfileViewController.swift; sourceTree = "<group>"; };
+		F261EC83229C037F00C483D1 /* ProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
+		F261EC85229C040B00C483D1 /* PeopleViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PeopleViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -142,7 +150,11 @@
 		FF4EAE54229670EA00C40B47 /* Controller */ = {
 			isa = PBXGroup;
 			children = (
-				96343989229664D4000CEA6E /* ViewController.swift */,
+				F261EC7D229C01DD00C483D1 /* MainViewController.swift */,
+				F261EC7F229C031700C483D1 /* GroupViewController.swift */,
+				F261EC81229C037100C483D1 /* MyProfileViewController.swift */,
+				F261EC83229C037F00C483D1 /* ProfileViewController.swift */,
+				F261EC85229C040B00C483D1 /* PeopleViewController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -287,7 +299,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				9634398A229664D4000CEA6E /* ViewController.swift in Sources */,
+				F261EC84229C037F00C483D1 /* ProfileViewController.swift in Sources */,
+				F261EC86229C040B00C483D1 /* PeopleViewController.swift in Sources */,
+				F261EC82229C037100C483D1 /* MyProfileViewController.swift in Sources */,
+				F261EC80229C031700C483D1 /* GroupViewController.swift in Sources */,
+				F261EC7E229C01DD00C483D1 /* MainViewController.swift in Sources */,
 				96343990229664D4000CEA6E /* GroupMaker.xcdatamodeld in Sources */,
 				96343988229664D4000CEA6E /* AppDelegate.swift in Sources */,
 			);
