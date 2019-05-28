@@ -18,6 +18,9 @@
 		F261EC82229C037100C483D1 /* MyProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F261EC81229C037100C483D1 /* MyProfileViewController.swift */; };
 		F261EC84229C037F00C483D1 /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F261EC83229C037F00C483D1 /* ProfileViewController.swift */; };
 		F261EC86229C040B00C483D1 /* PeopleViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F261EC85229C040B00C483D1 /* PeopleViewController.swift */; };
+		F261EC88229D36BD00C483D1 /* Student.swift in Sources */ = {isa = PBXBuildFile; fileRef = F261EC87229D36BD00C483D1 /* Student.swift */; };
+		F261EC8A229D36D500C483D1 /* Group.swift in Sources */ = {isa = PBXBuildFile; fileRef = F261EC89229D36D500C483D1 /* Group.swift */; };
+		F261EC8C229D37C200C483D1 /* Assignment.swift in Sources */ = {isa = PBXBuildFile; fileRef = F261EC8B229D37C200C483D1 /* Assignment.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -55,6 +58,9 @@
 		F261EC81229C037100C483D1 /* MyProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyProfileViewController.swift; sourceTree = "<group>"; };
 		F261EC83229C037F00C483D1 /* ProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
 		F261EC85229C040B00C483D1 /* PeopleViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PeopleViewController.swift; sourceTree = "<group>"; };
+		F261EC87229D36BD00C483D1 /* Student.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Student.swift; sourceTree = "<group>"; };
+		F261EC89229D36D500C483D1 /* Group.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Group.swift; sourceTree = "<group>"; };
+		F261EC8B229D37C200C483D1 /* Assignment.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Assignment.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -105,6 +111,7 @@
 		96343986229664D4000CEA6E /* GroupMaker */ = {
 			isa = PBXGroup;
 			children = (
+				96343996229664D5000CEA6E /* Info.plist */,
 				FF4EAE552296716300C40B47 /* Settings */,
 				FF4EAE54229670EA00C40B47 /* Controller */,
 				FF4EAE52229670DE00C40B47 /* View */,
@@ -135,6 +142,9 @@
 			isa = PBXGroup;
 			children = (
 				96343991229664D5000CEA6E /* Assets.xcassets */,
+				F261EC87229D36BD00C483D1 /* Student.swift */,
+				F261EC89229D36D500C483D1 /* Group.swift */,
+				F261EC8B229D37C200C483D1 /* Assignment.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -162,7 +172,6 @@
 		FF4EAE552296716300C40B47 /* Settings */ = {
 			isa = PBXGroup;
 			children = (
-				96343996229664D5000CEA6E /* Info.plist */,
 				9634398E229664D4000CEA6E /* GroupMaker.xcdatamodeld */,
 				96343987229664D4000CEA6E /* AppDelegate.swift */,
 			);
@@ -299,6 +308,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F261EC8A229D36D500C483D1 /* Group.swift in Sources */,
 				F261EC84229C037F00C483D1 /* ProfileViewController.swift in Sources */,
 				F261EC86229C040B00C483D1 /* PeopleViewController.swift in Sources */,
 				F261EC82229C037100C483D1 /* MyProfileViewController.swift in Sources */,
@@ -306,6 +316,8 @@
 				F261EC7E229C01DD00C483D1 /* MainViewController.swift in Sources */,
 				96343990229664D4000CEA6E /* GroupMaker.xcdatamodeld in Sources */,
 				96343988229664D4000CEA6E /* AppDelegate.swift in Sources */,
+				F261EC8C229D37C200C483D1 /* Assignment.swift in Sources */,
+				F261EC88229D36BD00C483D1 /* Student.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
