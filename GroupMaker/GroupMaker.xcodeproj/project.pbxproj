@@ -7,6 +7,12 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		4FF2B79A229E5415003D7382 /* profile-icon.png in Resources */ = {isa = PBXBuildFile; fileRef = 4FF2B797229E5415003D7382 /* profile-icon.png */; };
+		4FF2B79B229E5415003D7382 /* home-icon.png in Resources */ = {isa = PBXBuildFile; fileRef = 4FF2B798229E5415003D7382 /* home-icon.png */; };
+		4FF2B79C229E5415003D7382 /* groups-icon.png in Resources */ = {isa = PBXBuildFile; fileRef = 4FF2B799229E5415003D7382 /* groups-icon.png */; };
+		4FF2B7A0229E618A003D7382 /* profile-pic.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 4FF2B79F229E6189003D7382 /* profile-pic.jpg */; };
+		4FF2B7AB229E6871003D7382 /* interests-button.png in Resources */ = {isa = PBXBuildFile; fileRef = 4FF2B7A9229E6871003D7382 /* interests-button.png */; };
+		4FF2B7AC229E6871003D7382 /* skills-button.png in Resources */ = {isa = PBXBuildFile; fileRef = 4FF2B7AA229E6871003D7382 /* skills-button.png */; };
 		96343988229664D4000CEA6E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96343987229664D4000CEA6E /* AppDelegate.swift */; };
 		9634398D229664D4000CEA6E /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9634398B229664D4000CEA6E /* Main.storyboard */; };
 		96343990229664D4000CEA6E /* GroupMaker.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 9634398E229664D4000CEA6E /* GroupMaker.xcdatamodeld */; };
@@ -41,6 +47,12 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		4FF2B797229E5415003D7382 /* profile-icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "profile-icon.png"; sourceTree = "<group>"; };
+		4FF2B798229E5415003D7382 /* home-icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "home-icon.png"; sourceTree = "<group>"; };
+		4FF2B799229E5415003D7382 /* groups-icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "groups-icon.png"; sourceTree = "<group>"; };
+		4FF2B79F229E6189003D7382 /* profile-pic.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "profile-pic.jpg"; sourceTree = "<group>"; };
+		4FF2B7A9229E6871003D7382 /* interests-button.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "interests-button.png"; sourceTree = "<group>"; };
+		4FF2B7AA229E6871003D7382 /* skills-button.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "skills-button.png"; sourceTree = "<group>"; };
 		96343984229664D4000CEA6E /* GroupMaker.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GroupMaker.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		96343987229664D4000CEA6E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		9634398C229664D4000CEA6E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -111,6 +123,12 @@
 		96343986229664D4000CEA6E /* GroupMaker */ = {
 			isa = PBXGroup;
 			children = (
+				4FF2B799229E5415003D7382 /* groups-icon.png */,
+				4FF2B7A9229E6871003D7382 /* interests-button.png */,
+				4FF2B7AA229E6871003D7382 /* skills-button.png */,
+				4FF2B79F229E6189003D7382 /* profile-pic.jpg */,
+				4FF2B798229E5415003D7382 /* home-icon.png */,
+				4FF2B797229E5415003D7382 /* profile-icon.png */,
 				96343996229664D5000CEA6E /* Info.plist */,
 				FF4EAE552296716300C40B47 /* Settings */,
 				FF4EAE54229670EA00C40B47 /* Controller */,
@@ -283,7 +301,13 @@
 			buildActionMask = 2147483647;
 			files = (
 				96343992229664D5000CEA6E /* Assets.xcassets in Resources */,
+				4FF2B79A229E5415003D7382 /* profile-icon.png in Resources */,
 				9634398D229664D4000CEA6E /* Main.storyboard in Resources */,
+				4FF2B7AB229E6871003D7382 /* interests-button.png in Resources */,
+				4FF2B79B229E5415003D7382 /* home-icon.png in Resources */,
+				4FF2B7A0229E618A003D7382 /* profile-pic.jpg in Resources */,
+				4FF2B79C229E5415003D7382 /* groups-icon.png in Resources */,
+				4FF2B7AC229E6871003D7382 /* skills-button.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
