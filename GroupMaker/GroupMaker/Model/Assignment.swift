@@ -11,6 +11,7 @@ import Foundation
 class Assignment {
     
     //MARK: Constants
+    let assignmentId: String
     let name: String
     let subject: String
     
@@ -19,7 +20,8 @@ class Assignment {
     var students: Array<Student> = Array<Student>()
     
     //MARK: Initialisers
-    init(name: String, subject: String) {
+    init(assignmentId: String, name: String, subject: String) {
+        self.assignmentId = assignmentId
         self.name = name
         self.subject = subject
     }

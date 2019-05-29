@@ -13,7 +13,7 @@ class Student {
     // MARK: Constants
     let firstName: String
     let lastName: String
-    let studentId: Int
+    let studentId: String
     
     // MARK: Variables
     var skills: Array<String> = Array<String>()
@@ -21,7 +21,7 @@ class Student {
     var groups: Array<Group> = Array<Group>()
     
     // MARK: Initialisers
-    init(firstName: String, lastName:String, studentId: Int) {
+    init(firstName: String, lastName:String, studentId: String) {
         self.firstName = firstName
         self.lastName = lastName
         self.studentId = studentId

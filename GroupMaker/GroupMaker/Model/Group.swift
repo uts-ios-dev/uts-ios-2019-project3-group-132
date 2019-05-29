@@ -11,8 +11,9 @@ import Foundation
 class Group {
     
     // MARK: Constants
+    let groupId: String
     let name: String
-    let subject: String //Subject this group is apart of
+    let subjectId: String //Subject this group is apart of
     let assignment: Assignment //Assignment this group is apart of
     let maxGroupSize: Int
     
@@ -24,9 +25,10 @@ class Group {
     }
     
     // MARK: Initialisers
-    init(name: String, subject: String, assignment: Assignment, groupSize: Int) {
+    init(groupId: String, name: String, subjectId: String, assignment: Assignment, groupSize: Int) {
+        self.groupId = groupId
         self.name = name
-        self.subject = subject
+        self.subjectId = subjectId
         self.assignment = assignment
         self.maxGroupSize = groupSize
     }

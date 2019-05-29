@@ -13,6 +13,7 @@
 		4FF2B7A0229E618A003D7382 /* profile-pic.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 4FF2B79F229E6189003D7382 /* profile-pic.jpg */; };
 		4FF2B7AB229E6871003D7382 /* interests-button.png in Resources */ = {isa = PBXBuildFile; fileRef = 4FF2B7A9229E6871003D7382 /* interests-button.png */; };
 		4FF2B7AC229E6871003D7382 /* skills-button.png in Resources */ = {isa = PBXBuildFile; fileRef = 4FF2B7AA229E6871003D7382 /* skills-button.png */; };
+		9602B8C7229F5302001CBE05 /* Invitation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9602B8C6229F5302001CBE05 /* Invitation.swift */; };
 		96343988229664D4000CEA6E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96343987229664D4000CEA6E /* AppDelegate.swift */; };
 		9634398D229664D4000CEA6E /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9634398B229664D4000CEA6E /* Main.storyboard */; };
 		96343990229664D4000CEA6E /* GroupMaker.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 9634398E229664D4000CEA6E /* GroupMaker.xcdatamodeld */; };
@@ -53,6 +54,7 @@
 		4FF2B79F229E6189003D7382 /* profile-pic.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "profile-pic.jpg"; sourceTree = "<group>"; };
 		4FF2B7A9229E6871003D7382 /* interests-button.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "interests-button.png"; sourceTree = "<group>"; };
 		4FF2B7AA229E6871003D7382 /* skills-button.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "skills-button.png"; sourceTree = "<group>"; };
+		9602B8C6229F5302001CBE05 /* Invitation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Invitation.swift; sourceTree = "<group>"; };
 		96343984229664D4000CEA6E /* GroupMaker.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GroupMaker.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		96343987229664D4000CEA6E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		9634398C229664D4000CEA6E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -163,6 +165,7 @@
 				F261EC87229D36BD00C483D1 /* Student.swift */,
 				F261EC89229D36D500C483D1 /* Group.swift */,
 				F261EC8B229D37C200C483D1 /* Assignment.swift */,
+				9602B8C6229F5302001CBE05 /* Invitation.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -340,6 +343,7 @@
 				F261EC7E229C01DD00C483D1 /* MainViewController.swift in Sources */,
 				96343990229664D4000CEA6E /* GroupMaker.xcdatamodeld in Sources */,
 				96343988229664D4000CEA6E /* AppDelegate.swift in Sources */,
+				9602B8C7229F5302001CBE05 /* Invitation.swift in Sources */,
 				F261EC8C229D37C200C483D1 /* Assignment.swift in Sources */,
 				F261EC88229D36BD00C483D1 /* Student.swift in Sources */,
 			);
