@@ -10,10 +10,19 @@ import UIKit
 
 class MyProfileViewController: UIViewController {
 
+    @IBOutlet weak var textFullName: UITextField!
+    @IBOutlet weak var textPrefferedName: UITextField!
+    @IBOutlet weak var textStudentId: UITextField!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
+        var thisStudent = Student(fullName: "Morgan Stark", preferredName: "Morgan", studentId: "10639437")
+        textFullName.text = thisStudent.fullName
+        textPrefferedName.text = thisStudent.preferredName
+        textStudentId.text = thisStudent.studentId
+        
     }
     
 

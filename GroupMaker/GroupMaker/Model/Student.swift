@@ -11,8 +11,8 @@ import Foundation
 class Student {
     
     // MARK: Constants
-    let firstName: String
-    let lastName: String
+    let fullName: String
+    let preferredName: String
     let studentId: String
     
     // MARK: Variables
@@ -21,9 +21,9 @@ class Student {
     var groups: Array<Group> = Array<Group>()
     
     // MARK: Initialisers
-    init(firstName: String, lastName:String, studentId: String) {
-        self.firstName = firstName
-        self.lastName = lastName
+    init(fullName: String, preferredName:String, studentId: String) {
+        self.fullName = fullName
+        self.preferredName = preferredName
         self.studentId = studentId
     }
     
