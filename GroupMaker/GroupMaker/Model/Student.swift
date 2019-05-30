@@ -18,7 +18,7 @@ class Student {
     // MARK: Variables
     var skills: Array<String> = Array<String>()
     var totalPoints: Int //the total points is caculated from student's skill set in an assignment, calculation func is in Helper class
-    var assignmentExpertation: String
+    var assignmentExpectation: String
     var interests: Array<String> = Array<String>()
     var groups: Array<Group> = Array<Group>()
     
@@ -28,7 +28,7 @@ class Student {
         self.preferredName = preferredName
         self.studentId = studentId
         self.totalPoints = 0 //by default the student rates 0 points in an assignment
-        self.assignmentExpertation = "P" //by default the student's expectataion is Passs in an assignment
+        self.assignmentExpectation = "P" //by default the student's expectation is Passs in an assignment
     }
     
     //MARK: Functions
