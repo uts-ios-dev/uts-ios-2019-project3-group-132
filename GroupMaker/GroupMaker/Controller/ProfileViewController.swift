@@ -10,6 +10,18 @@ import UIKit
 
 class ProfileViewController: UIViewController {
 
+    // MARK: Outlet
+    @IBOutlet weak var titleLbl: UILabel!
+    @IBOutlet weak var profileImageView: UIImageView!
+    @IBOutlet weak var skillsTableView: UITableView!
+    @IBOutlet weak var interestsTableView: UITableView!
+    @IBOutlet weak var backBtn: UIButton!
+    
+    // MARK: Action
+    @IBAction func backBtnPressed(_ sender: UIButton) {
+    }
+    
+    // MARK: Initialiser
     override func viewDidLoad() {
         super.viewDidLoad()
 

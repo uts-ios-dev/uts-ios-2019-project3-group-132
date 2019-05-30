@@ -24,6 +24,10 @@ class Group {
         return members.count == maxGroupSize
     }
     
+    var size: Int {
+        return members.count
+    }
+    
     // MARK: Initialisers
     init(groupId: String, name: String, subjectId: String, assignment: Assignment, groupSize: Int) {
         self.groupId = groupId
