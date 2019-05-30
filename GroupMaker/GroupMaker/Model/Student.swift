@@ -10,13 +10,15 @@ import Foundation
 
 class Student {
     
-    // MARK: Constants
+    // MARK: Constant
     let fullName: String
     let preferredName: String
     let studentId: String
     
     // MARK: Variables
-    var skills: Array<String> = Array<String>()
+    var skills: Array<Skill> = Array<Skill>() //a student has a list of skills to contribute to the group when working on the assignment
+    var totalPoints: Int //the total points is caculated from student's skill set in an assignment, calculation func is in Helper class
+    var assignmentExpectation: String //the student's expectation on the group result for this assginment, HD / D / C / P
     var interests: Array<String> = Array<String>()
     var groups: Array<Group> = Array<Group>()
     
@@ -25,6 +27,8 @@ class Student {
         self.fullName = fullName
         self.preferredName = preferredName
         self.studentId = studentId
+        self.totalPoints = 0 //by default the student rates 0 points in an assignment
+        self.assignmentExpectation = "P" //by default the student's expectation is Passs in an assignment
     }
     
     //MARK: Functions
