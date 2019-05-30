@@ -9,7 +9,29 @@
 import UIKit
 
 class MainViewController: UIViewController {
-
+    
+    
+    @IBOutlet weak var GroupsStackView: UIStackView!
+    
+    @IBOutlet weak var InvitesStackView: UIStackView!
+    
+    @IBOutlet weak var SwitcherGroupsInvites: UISegmentedControl!
+    
+    @IBAction func SwitchGroupsInvites(_ sender: UISegmentedControl) {
+        
+        switch SwitcherGroupsInvites.selectedSegmentIndex {
+        case 0: // groups
+            GroupsStackView.isHidden = false
+            InvitesStackView.isHidden = true
+        case 1: // invites
+            GroupsStackView.isHidden = true
+            InvitesStackView.isHidden = false
+        default:
+            break
+        }
+    }
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
