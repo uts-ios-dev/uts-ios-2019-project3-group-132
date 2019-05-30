@@ -227,10 +227,21 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             </tableView>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="O9U-0e-U0p">
+                                <rect key="frame" x="26" y="44" width="34" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Back"/>
+                                <connections>
+                                    <action selector="backBtnPressed:" destination="ilJ-3Q-2JJ" eventType="touchUpInside" id="JEF-rQ-ofq"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" red="0.9100688099861145" green="0.91406160593032837" blue="0.92106229066848755" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <viewLayoutGuide key="safeArea" id="7qq-3l-3jt"/>
                     </view>
+                    <connections>
+                        <outlet property="backBtn" destination="O9U-0e-U0p" id="aOA-1u-cJu"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="lUo-7w-7Y6" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -251,8 +262,9 @@
                                 <color key="textColor" red="0.19168648120000001" green="0.21094739439999999" blue="0.2186900973" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <stackView opaque="NO" contentMode="scaleToFill" ambiguous="YES" axis="vertical" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="eaN-mY-crc" userLabel="Details Stack View">
+                            <stackView opaque="NO" contentMode="scaleToFill" fixedFrame="YES" axis="vertical" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="eaN-mY-crc" userLabel="Details Stack View">
                                 <rect key="frame" x="5" y="107" width="404" height="517"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <subviews>
                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="2At-GL-h5T">
                                         <rect key="frame" x="0.0" y="0.0" width="404" height="128"/>
@@ -289,10 +301,6 @@
                             </button>
                         </subviews>
                         <color key="backgroundColor" red="0.9100688099861145" green="0.91406160593032837" blue="0.92106229066848755" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                        <constraints>
-                            <constraint firstItem="kmf-Ws-WL0" firstAttribute="trailing" secondItem="eaN-mY-crc" secondAttribute="trailing" constant="5" id="WvU-Et-z25"/>
-                            <constraint firstItem="eaN-mY-crc" firstAttribute="leading" secondItem="kmf-Ws-WL0" secondAttribute="leading" constant="5" id="cIT-mF-Xjk"/>
-                        </constraints>
                         <viewLayoutGuide key="safeArea" id="kmf-Ws-WL0"/>
                     </view>
                     <connections>
@@ -417,7 +425,6 @@
                     <connections>
                         <segue destination="hhm-77-O9z" kind="relationship" relationship="viewControllers" id="Wz4-Xp-ulH"/>
                         <segue destination="str-gA-3d3" kind="relationship" relationship="viewControllers" id="zEc-mz-arM"/>
-                        <segue destination="4PD-tZ-HjR" kind="relationship" relationship="viewControllers" id="ctn-CB-yLJ"/>
                     </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="pTQ-AO-bC5" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -433,7 +440,4 @@
         <image name="profile-pic.jpg" width="1910" height="1910"/>
         <image name="skills-button.png" width="291" height="68"/>
     </resources>
-    <inferredMetricsTieBreakers>
-        <segue reference="u3Z-sz-DL1"/>
-    </inferredMetricsTieBreakers>
 </document>

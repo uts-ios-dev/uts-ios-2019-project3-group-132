@@ -8,7 +8,7 @@
 
 import UIKit
 
-class GroupViewController: UIViewController, UITableViewDataSource {
+class GroupViewController: UIViewController, UITableViewDataSource, UITableViewDelegate {
     
     // MARK: Outlet
     @IBOutlet weak var titleLbl: UILabel!
@@ -37,11 +37,12 @@ class GroupViewController: UIViewController, UITableViewDataSource {
 
         // Do any additional setup after loading the view.
         memberTableView.dataSource = self
+        memberTableView.delegate = self
         
-        if(currentGroup != nil) {
-            titleLbl.text = currentGroup?.name
-            subjectLbl.text = "Subject Id: \(currentGroup?.subjectId ?? "Subject Id: <None Defined>")"
-            assignmentLbl.text = "Assignment: \(currentGroup?.assignment.name ?? "Assignment: <None defined>")"
+        if let group = currentGroup {
+            titleLbl.text = group.name
+            subjectLbl.text = "Subject Id: \(group.subjectId)"
+            assignmentLbl.text = "Assignment: \(group.assignment.name)"
         }
     }
     
@@ -59,6 +60,12 @@ class GroupViewController: UIViewController, UITableViewDataSource {
         
         return cell
     }
+    
+    // Delegate
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        //getting the index path of selected row
+        self.performSegue(withIdentifier: "showProfileSegue", sender: self)
+    }
 
     // MARK: - Navigation
 
@@ -68,6 +75,15 @@ class GroupViewController: UIViewController, UITableViewDataSource {
         // Pass the selected object to the new view controller.
         if (segue.identifier == "showProfileSegue")
         {
+            // upcoming is set to NewViewController (.swift)
+            let upcoming: ProfileViewController = segue.destination as! ProfileViewController
+            // indexPath is set to the path that was tapped
+            let indexPath = self.memberTableView.indexPathForSelectedRow
+            // Group is set to the title at the row in the objects array.
+            let selectedMember = self.currentGroup?.members[(indexPath?.row)!]
+            // the Group property of GroupViewController is set.
+            upcoming.currentProfile = selectedMember
+            self.memberTableView.deselectRow(at: indexPath!, animated: true)
         }
     }
 }
