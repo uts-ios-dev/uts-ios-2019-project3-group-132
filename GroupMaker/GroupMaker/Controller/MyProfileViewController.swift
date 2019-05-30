@@ -18,7 +18,7 @@ class MyProfileViewController: UIViewController {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
-        var thisStudent = Student(fullName: "Morgan Stark", preferredName: "Morgan", studentId: "10639437")
+        let thisStudent = Student(fullName: "Morgan Stark", preferredName: "Morgan", studentId: "10639437")
         textFullName.text = thisStudent.fullName
         textPrefferedName.text = thisStudent.preferredName
         textStudentId.text = thisStudent.studentId
