@@ -13,7 +13,15 @@ class Helper {
     
     //Skill caculator is to calculate a student's totoal skill points in an assignment
     func SkillCalculator (student: Student, assignment: Assignment) {
-        print("skill calculator")
+        for i in 0..<student.skills.count {
+            
+            for j in 0..<assignment.skills.count {
+                //when a student has a skill in the assignment's skill set, then add the skill's assignment point to the student's total points
+                if (student.skills[i].skillId == assignment.skills[j].skillId) {
+                    student.totalPoints += assignment.skills[j].skillPoint
+                }
+            }
+        }
     }
 }
 
