@@ -10,7 +10,7 @@ import Foundation
 
 class Student {
     
-    // MARK: Constants
+    // MARK: Constant
     let fullName: String
     let preferredName: String
     let studentId: String

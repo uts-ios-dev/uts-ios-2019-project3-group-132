@@ -9,6 +9,8 @@
 import UIKit
 
 class PeopleViewController: UIViewController {
+    
+    
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -16,7 +18,13 @@ class PeopleViewController: UIViewController {
         // Do any additional setup after loading the view.
     }
     
-
+    /*
+    func expectationSort() {
+        var expectationList = [[String]](repeating: [String](repeating: 0, count: 7), count: 9)
+    }
+    */
+    
+    
     /*
     // MARK: - Navigation
 
