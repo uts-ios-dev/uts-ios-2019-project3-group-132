@@ -18,7 +18,7 @@ class Group {
     let maxGroupSize: Int
     
     // MARK: Variables/ Properties
-    var members: Array<Student> = Array<Student>() //Current group members
+    var members: Array<Student> = Array<Student>() //a list of the students in this group
     
     var isGroupFull: Bool {
         return members.count == maxGroupSize
