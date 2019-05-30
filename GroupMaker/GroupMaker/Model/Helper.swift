@@ -12,7 +12,7 @@ import Foundation
 class Helper {
     
     //Skill caculator is to calculate a student's totoal skill points in an assignment
-    func SkillCalculator (student: Student, assignment: Assignment) {
+    func skillCalculator (student: Student, assignment: Assignment) {
         for i in 0..<student.skills.count {
             
             for j in 0..<assignment.skills.count {

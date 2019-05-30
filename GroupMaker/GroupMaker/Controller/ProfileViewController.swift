@@ -8,12 +8,40 @@
 
 import UIKit
 
-class ProfileViewController: UIViewController {
+class ProfileViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
 
+    // MARK: Outlet
+    @IBOutlet weak var titleLbl: UILabel!
+    @IBOutlet weak var profileImageView: UIImageView!
+    @IBOutlet weak var skillsTableView: UITableView!
+    @IBOutlet weak var interestsTableView: UITableView!
+    @IBOutlet weak var backBtn: UIButton!
+    
+    // MARK: Action
+    @IBAction func backBtnPressed(_ sender: UIButton) {
+        dismiss(animated: true, completion: nil)
+    }
+    
+    // MARK: Variables
+    var currentProfile: Student? = nil
+    
+    // MARK: Initialiser
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
+        
+        if let profile = currentProfile {
+            titleLbl.text = profile.preferredName
+        }
+    }
+    
+    // MARK: TableView Functions
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return 1
+    }
+    
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        // TODO:
+        return UITableViewCell.init()
     }
     
 
