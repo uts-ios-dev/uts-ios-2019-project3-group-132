@@ -16,8 +16,8 @@ class Assignment {
     let subject: String
     
     //MARK: Variables
-    var skills: Array<Skill> = Array<Skill>()
-    var students: Array<Student> = Array<Student>()
+    var skills: Array<Skill> = Array<Skill>() //an assignment has a list of skills as its skill set
+    var students: Array<Student> = Array<Student>() // an assignment has a list of students who is taking this assignment
     
     //MARK: Initialisers
     init(assignmentId: String, name: String, subject: String) {

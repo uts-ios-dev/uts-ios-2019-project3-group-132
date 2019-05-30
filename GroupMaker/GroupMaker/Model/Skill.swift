@@ -16,7 +16,7 @@ class Skill {
     
     
     //MARK: Variables
-    var skillPoint = 0
+    var skillPoint = 0 //by default the skill point of a skill is 0 until defined with an actual value
     
     //MARK: Initialisers
     init(skillId: String, skillName: String, skillPoint: Int) {

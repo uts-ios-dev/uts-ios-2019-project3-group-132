@@ -16,9 +16,9 @@ class Student {
     let studentId: String
     
     // MARK: Variables
-    var skills: Array<Skill> = Array<Skill>()
+    var skills: Array<Skill> = Array<Skill>() //a student has a list of skills to contribute to the group when working on the assignment
     var totalPoints: Int //the total points is caculated from student's skill set in an assignment, calculation func is in Helper class
-    var assignmentExpectation: String
+    var assignmentExpectation: String //the student's expectation on the group result for this assginment, HD / D / C / P
     var interests: Array<String> = Array<String>()
     var groups: Array<Group> = Array<Group>()
     
