@@ -16,7 +16,7 @@ class Assignment {
     let subject: String
     
     //MARK: Variables
-    var skills: Array<String> = Array<String>()
+    var skills: Array<Skill> = Array<Skill>()
     var students: Array<Student> = Array<Student>()
     
     //MARK: Initialisers
