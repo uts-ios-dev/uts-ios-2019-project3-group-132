@@ -18,7 +18,6 @@ class Assignment {
     //MARK: Variables
     var skills: Array<String> = Array<String>()
     var students: Array<Student> = Array<Student>()
-    var expectationList: Array<Array<String>> = Array<Array<String>>()
     
     //MARK: Initialisers
     init(assignmentId: String, name: String, subject: String) {

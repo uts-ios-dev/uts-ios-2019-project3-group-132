@@ -20,10 +20,26 @@ class PeopleViewController: UIViewController {
     
     /*
     func expectationSort() {
-        var expectationList = [[String]](repeating: [String](repeating: 0, count: 7), count: 9)
-    }
-    */
-    
+        var studentArray: Array<Student> = Array<Student>()
+        
+        let assignment_1 = Assignment(assignmentId: "3", name: "Assignment 3: Design and Develop an Application", subject: "Application Development in the IOS Environment")
+        var array1 = studentArray
+        var array2 = assignment_1.expectationList
+        
+        
+         for i in 0...array2.count - 1 {
+         if array1[i][1] == "HD" {
+         array2[i][1] = array1[i][1]
+         array2[i][0] = array1[i][0]
+         }
+         }
+        
+         for i in 0...array1.count - 1{
+         
+         }
+        
+     }
+ */
     
     /*
     // MARK: - Navigation
