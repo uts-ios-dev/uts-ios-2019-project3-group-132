@@ -23,5 +23,29 @@ class Helper {
             }
         }
     }
+    
+    //ExpectationSort is for putting together the students with same expected mark
+    func expectationSort(students: Array<Student>) {
+        var studentArray = students
+        //Get students of each expectation together
+        for index in 0...studentArray.count - 1 {
+            switch studentArray[index].assignmentExpectation {
+            case "HD":
+                studentArray.append(studentArray[index])
+                studentArray.remove(at: index)
+            case "D":
+                studentArray.append(studentArray[index])
+                studentArray.remove(at: index)
+            case "C":
+                studentArray.append(studentArray[index])
+                studentArray.remove(at: index)
+            case "P":
+                studentArray.append(studentArray[index])
+                studentArray.remove(at: index)
+            default:
+                break
+            }
+        }
+    }
 }
 
