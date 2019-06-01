@@ -12,7 +12,7 @@ import Foundation
 class Helper {
     
     //Skill caculator is to calculate a student's totoal skill points in an assignment
-    func SkillCalculator (student: Student, assignment: Assignment) {
+    func skillCalculator (student: Student, assignment: Assignment) {
         for i in 0..<student.skills.count {
             
             for j in 0..<assignment.skills.count {
@@ -29,21 +29,30 @@ class Helper {
         var studentArray = students
         //Get students of each expectation together
         for index in 0...studentArray.count - 1 {
-            switch studentArray[index].assignmentExpectation {
-            case "HD":
+            if studentArray[index].assignmentExpectation == "HD"{
                 studentArray.append(studentArray[index])
                 studentArray.remove(at: index)
-            case "D":
+            }
+        }
+        
+        for index in 0...studentArray.count - 1 {
+            if studentArray[index].assignmentExpectation == "D"{
                 studentArray.append(studentArray[index])
                 studentArray.remove(at: index)
-            case "C":
+            }
+        }
+        
+        for index in 0...studentArray.count - 1 {
+            if studentArray[index].assignmentExpectation == "C"{
                 studentArray.append(studentArray[index])
                 studentArray.remove(at: index)
-            case "P":
+            }
+        }
+        
+        for index in 0...studentArray.count - 1 {
+            if studentArray[index].assignmentExpectation == "P"{
                 studentArray.append(studentArray[index])
                 studentArray.remove(at: index)
-            default:
-                break
             }
         }
     }
