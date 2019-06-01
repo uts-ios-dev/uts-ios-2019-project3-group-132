@@ -110,8 +110,9 @@ extension MainViewController: CustomAlertViewDelegate {
         if let assignment = Helper.getAssignmentWithName(name: selectedOption) {
             groupList.append(Group(groupId: "1", name: textFieldValue, subjectId: "1", assignment: assignment, groupSize: groupSize, member: Helper.getStudents()[0]))
             self.GroupTableView.reloadData()
+            self.dismiss(animated: true, completion: nil)
         } else {
-            //Error
+            
         }
     }
     
