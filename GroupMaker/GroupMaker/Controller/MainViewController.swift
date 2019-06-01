@@ -22,6 +22,30 @@ class MainViewController: UIViewController, UITableViewDataSource, UITableViewDe
     @IBOutlet weak var SwitcherGroupsInvites: UISegmentedControl!
     
     // MARK: Action
+    @IBAction func createBtnPressed(_ sender: UIButton)
+    {
+        let ac = UIAlertController(title: "Group Name", message: nil, preferredStyle: .alert)
+        
+        ac.addTextField()
+        ac.add
+            
+        let submitAction = UIAlertAction(title: "Create", style:.default) {
+            
+            [unowned ac] _ in
+        
+            let answer = ac.textFields![0]
+        
+            //let group = Group(groupId: "2", name: answer.text!, subjectId: "3", assignment: Assignment(assignmentId: "123"), groupSize: 3)
+
+            //groupList.append(group)
+            
+        }
+            
+        ac.addAction(submitAction)
+            
+        present(ac, animated: true)
+    }
+    
     @IBAction func SwitchGroupsInvites(_ sender: UISegmentedControl) {
         
         switch SwitcherGroupsInvites.selectedSegmentIndex {
@@ -39,10 +63,7 @@ class MainViewController: UIViewController, UITableViewDataSource, UITableViewDe
     // MARK: Variable
     
     //TODO: Not hardcode this list
-    var groupList: Array<Group> = [
-        Group(groupId: "1", name: "iOS Group 1", subjectId: "1", assignment: Assignment(assignmentId: "1", name: "Assignment 1", subject: "iOS App Dev"), groupSize: 5),
-        Group(groupId: "2", name: "iOS Group 2", subjectId: "1", assignment: Assignment(assignmentId: "2", name: "Assignment 2", subject: "iOS App Dev"), groupSize: 2),
-        Group(groupId: "3", name: "ITOM Group 1", subjectId: "1", assignment: Assignment(assignmentId: "3", name: "Assignment 1", subject: "ITOM"), groupSize: 3)]
+    var groupList: Array<Group> = Helper.getGroups()
     
     // MARK: Initialiser
     override func viewDidLoad() {
@@ -50,9 +71,6 @@ class MainViewController: UIViewController, UITableViewDataSource, UITableViewDe
 
         GroupTableView.dataSource = self
         GroupTableView.delegate = self
-        
-        groupList[0].addGroupMember(student: Student(fullName: "Peter Smith", preferredName: "Pete", studentId: "1234567"))
-        groupList[0].addGroupMember(student: Student(fullName: "Morgan Stark", preferredName: "Morgan", studentId: "10639437"))
     }
     
     // MARK: TableView

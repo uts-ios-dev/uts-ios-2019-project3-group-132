@@ -47,5 +47,22 @@ class Helper {
             }
         }
     }
+    
+    static func getGroups() -> Array<Group> {
+        return [
+            Group(groupId: "1", name: "iOS Assignment 1", subjectId: "1", assignment: Assignment(assignmentId: "1", name: "Assignment 1", subject: "iOS Application Development"), groupSize: 3, members: [Helper.getStudents()[0], Helper.getStudents()[1]]),
+            Group(groupId: "2", name: "iOS Assignment 2", subjectId: "1", assignment: Assignment(assignmentId: "2", name: "Assignment 2", subject: "iOS Application Development"), groupSize: 3, members: [Helper.getStudents()[0], Helper.getStudents()[1], Helper.getStudents()[2]])
+        ]
+    }
+    
+    static func getStudents() -> Array<Student> {
+        return [
+            Student(fullName: "Morgan Stark", preferredName: "Morgan", studentId: "10639437"),
+            Student(fullName: "Peter Smith", preferredName: "Pete", studentId: "12345678"),
+            Student(fullName: "Gloria Han", preferredName: "Gloria", studentId: "87654321"),
+            Student(fullName: "Henry Wann", preferredName: "Hen Hen", studentId: "51235671"),
+            Student(fullName: "Leonard Cass", preferredName: "Cass", studentId: "64321577")
+        ]
+    }
 }
 

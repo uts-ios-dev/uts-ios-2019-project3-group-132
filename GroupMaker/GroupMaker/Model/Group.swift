@@ -29,12 +29,22 @@ class Group {
     }
     
     // MARK: Initialisers
-    init(groupId: String, name: String, subjectId: String, assignment: Assignment, groupSize: Int) {
+    init(groupId: String, name: String, subjectId: String, assignment: Assignment, groupSize: Int, member: Student) {
         self.groupId = groupId
         self.name = name
         self.subjectId = subjectId
         self.assignment = assignment
         self.maxGroupSize = groupSize
+        self.addGroupMember(student: member)
+    }
+    
+    init(groupId: String, name: String, subjectId: String, assignment: Assignment, groupSize: Int, members: Array<Student>) {
+        self.groupId = groupId
+        self.name = name
+        self.subjectId = subjectId
+        self.assignment = assignment
+        self.maxGroupSize = groupSize
+        self.members = members
     }
     
     // MARK: Functions

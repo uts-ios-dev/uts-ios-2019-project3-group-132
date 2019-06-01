@@ -43,6 +43,11 @@ class GroupViewController: UIViewController, UITableViewDataSource, UITableViewD
             titleLbl.text = group.name
             subjectLbl.text = "Subject Id: \(group.subjectId)"
             assignmentLbl.text = "Assignment: \(group.assignment.name)"
+            
+            // Disable button if the group has max number of members
+            if (group.isGroupFull) {
+                addMemberBtn.isEnabled = false
+            }
         }
     }
     
