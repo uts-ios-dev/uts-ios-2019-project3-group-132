@@ -1,0 +1,6 @@
+framework module Pods_GroupMakerTests {
+  umbrella header "Pods-GroupMakerTests-umbrella.h"
+
+  export *
+  module * { export * }
+}

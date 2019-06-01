@@ -24,26 +24,13 @@ class MainViewController: UIViewController, UITableViewDataSource, UITableViewDe
     // MARK: Action
     @IBAction func createBtnPressed(_ sender: UIButton)
     {
-        let ac = UIAlertController(title: "Group Name", message: nil, preferredStyle: .alert)
-        
-        ac.addTextField()
-        ac.add
-            
-        let submitAction = UIAlertAction(title: "Create", style:.default) {
-            
-            [unowned ac] _ in
-        
-            let answer = ac.textFields![0]
-        
-            //let group = Group(groupId: "2", name: answer.text!, subjectId: "3", assignment: Assignment(assignmentId: "123"), groupSize: 3)
-
-            //groupList.append(group)
-            
-        }
-            
-        ac.addAction(submitAction)
-            
-        present(ac, animated: true)
+        let customAlert = self.storyboard?.instantiateViewController(withIdentifier: "CustomAlertID") as! CustomAlertViewController
+        customAlert.providesPresentationContextTransitionStyle = true
+        customAlert.definesPresentationContext = true
+        customAlert.modalPresentationStyle = UIModalPresentationStyle.overCurrentContext
+        customAlert.modalTransitionStyle = UIModalTransitionStyle.crossDissolve
+        customAlert.delegate = self
+        self.present(customAlert, animated: true, completion: nil)
     }
     
     @IBAction func SwitchGroupsInvites(_ sender: UISegmentedControl) {
@@ -97,7 +84,6 @@ class MainViewController: UIViewController, UITableViewDataSource, UITableViewDe
         self.performSegue(withIdentifier: "showGroup", sender: self)
     }
     
-    
     // MARK: - Navigation
 
     // In a storyboard-based application, you will often want to do a little preparation before navigation
@@ -116,5 +102,20 @@ class MainViewController: UIViewController, UITableViewDataSource, UITableViewDe
             upcoming.currentGroup = selectedGroup
             self.GroupTableView.deselectRow(at: indexPath!, animated: true)
         }
+    }
+}
+
+extension MainViewController: CustomAlertViewDelegate {
+    func okButtonTapped(selectedOption: String, textFieldValue: String, groupSize: Int) {
+        if let assignment = Helper.getAssignmentWithName(name: selectedOption) {
+            groupList.append(Group(groupId: "1", name: textFieldValue, subjectId: "1", assignment: assignment, groupSize: groupSize, member: Helper.getStudents()[0]))
+            self.GroupTableView.reloadData()
+        } else {
+            //Error
+        }
+    }
+    
+    func cancelButtonTapped() {
+        //Do nothing
     }
 }

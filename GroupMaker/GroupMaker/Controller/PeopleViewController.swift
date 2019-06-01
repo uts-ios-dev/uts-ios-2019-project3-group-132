@@ -10,8 +10,6 @@ import UIKit
 
 class PeopleViewController: UIViewController {
     
-    
-
     @IBOutlet weak var backBtn: UIButton!
     
     @IBAction func backBtnPressed(_ sender: UIButton) {

@@ -14,11 +14,11 @@ class Group {
     let groupId: String
     let name: String
     let subjectId: String //Subject this group is apart of
-    let assignment: Assignment //Assignment this group is apart of
     let maxGroupSize: Int
     
     // MARK: Variables/ Properties
     var members: Array<Student> = Array<Student>() //a list of the students in this group
+    var assignment: Assignment = Assignment(assignmentId: "", name: "", subject: "") //Assignment this group is apart of
     
     var isGroupFull: Bool {
         return members.count == maxGroupSize
@@ -29,6 +29,14 @@ class Group {
     }
     
     // MARK: Initialisers
+    init(groupId: String, name: String, subjectId: String, groupSize: Int, member: Student) {
+        self.groupId = groupId
+        self.name = name
+        self.subjectId = subjectId
+        self.maxGroupSize = groupSize
+        self.addGroupMember(student: member)
+    }
+    
     init(groupId: String, name: String, subjectId: String, assignment: Assignment, groupSize: Int, member: Student) {
         self.groupId = groupId
         self.name = name

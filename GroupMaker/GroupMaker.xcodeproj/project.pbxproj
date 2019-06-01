@@ -3,10 +3,13 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
+		047384D6C01BC431684F034E /* Pods_GroupMakerTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = ACEA1E6CF8648456944C597E /* Pods_GroupMakerTests.framework */; };
+		232584F15E27941A094686F2 /* Pods_GroupMaker.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7116EB642EA1CB1263486F48 /* Pods_GroupMaker.framework */; };
+		4A05FCC4809A8F8012812748 /* Pods_GroupMakerUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 65CEF198CE9F9F45A47F2CEA /* Pods_GroupMakerUITests.framework */; };
 		4FF2B79A229E5415003D7382 /* profile-icon.png in Resources */ = {isa = PBXBuildFile; fileRef = 4FF2B797229E5415003D7382 /* profile-icon.png */; };
 		4FF2B79B229E5415003D7382 /* home-icon.png in Resources */ = {isa = PBXBuildFile; fileRef = 4FF2B798229E5415003D7382 /* home-icon.png */; };
 		4FF2B79C229E5415003D7382 /* groups-icon.png in Resources */ = {isa = PBXBuildFile; fileRef = 4FF2B799229E5415003D7382 /* groups-icon.png */; };
@@ -30,6 +33,9 @@
 		F261EC88229D36BD00C483D1 /* Student.swift in Sources */ = {isa = PBXBuildFile; fileRef = F261EC87229D36BD00C483D1 /* Student.swift */; };
 		F261EC8A229D36D500C483D1 /* Group.swift in Sources */ = {isa = PBXBuildFile; fileRef = F261EC89229D36D500C483D1 /* Group.swift */; };
 		F261EC8C229D37C200C483D1 /* Assignment.swift in Sources */ = {isa = PBXBuildFile; fileRef = F261EC8B229D37C200C483D1 /* Assignment.swift */; };
+		F261EC9722A23F1800C483D1 /* iOSDropDown.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F261EC9622A23F1800C483D1 /* iOSDropDown.framework */; };
+		F261EC9922A24F7D00C483D1 /* CustomAlertViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F261EC9822A24F7D00C483D1 /* CustomAlertViewController.swift */; };
+		F261EC9B22A24FC000C483D1 /* CustomAlertViewDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F261EC9A22A24FC000C483D1 /* CustomAlertViewDelegate.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -50,12 +56,20 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		16DE337B09DEFEB81ACEEF12 /* Pods-GroupMakerTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GroupMakerTests.debug.xcconfig"; path = "Target Support Files/Pods-GroupMakerTests/Pods-GroupMakerTests.debug.xcconfig"; sourceTree = "<group>"; };
+		189538848142DEE9A4CA7F06 /* Pods-GroupMaker.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GroupMaker.debug.xcconfig"; path = "Target Support Files/Pods-GroupMaker/Pods-GroupMaker.debug.xcconfig"; sourceTree = "<group>"; };
+		364BBC06BAB62478B577C1EF /* Pods-GroupMakerUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GroupMakerUITests.debug.xcconfig"; path = "Target Support Files/Pods-GroupMakerUITests/Pods-GroupMakerUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		4FF2B797229E5415003D7382 /* profile-icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "profile-icon.png"; sourceTree = "<group>"; };
 		4FF2B798229E5415003D7382 /* home-icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "home-icon.png"; sourceTree = "<group>"; };
 		4FF2B799229E5415003D7382 /* groups-icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "groups-icon.png"; sourceTree = "<group>"; };
 		4FF2B79F229E6189003D7382 /* profile-pic.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "profile-pic.jpg"; sourceTree = "<group>"; };
 		4FF2B7A9229E6871003D7382 /* interests-button.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "interests-button.png"; sourceTree = "<group>"; };
 		4FF2B7AA229E6871003D7382 /* skills-button.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "skills-button.png"; sourceTree = "<group>"; };
+		52F38315A9FC9C9A53532D94 /* Pods-GroupMaker.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GroupMaker.release.xcconfig"; path = "Target Support Files/Pods-GroupMaker/Pods-GroupMaker.release.xcconfig"; sourceTree = "<group>"; };
+		65CEF198CE9F9F45A47F2CEA /* Pods_GroupMakerUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_GroupMakerUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		7116EB642EA1CB1263486F48 /* Pods_GroupMaker.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_GroupMaker.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		845AF815AF3D42141251B95D /* Pods-GroupMakerUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GroupMakerUITests.release.xcconfig"; path = "Target Support Files/Pods-GroupMakerUITests/Pods-GroupMakerUITests.release.xcconfig"; sourceTree = "<group>"; };
+		91A8050DFE362D5F6B379D4B /* Pods-GroupMakerTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GroupMakerTests.release.xcconfig"; path = "Target Support Files/Pods-GroupMakerTests/Pods-GroupMakerTests.release.xcconfig"; sourceTree = "<group>"; };
 		9602B8C6229F5302001CBE05 /* Invitation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Invitation.swift; sourceTree = "<group>"; };
 		9602B8C8229F8B80001CBE05 /* Skill.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Skill.swift; sourceTree = "<group>"; };
 		9602B8CA229F93DF001CBE05 /* Helper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Helper.swift; sourceTree = "<group>"; };
@@ -71,6 +85,7 @@
 		963439A6229664D5000CEA6E /* GroupMakerUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = GroupMakerUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		963439AA229664D5000CEA6E /* GroupMakerUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GroupMakerUITests.swift; sourceTree = "<group>"; };
 		963439AC229664D5000CEA6E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		ACEA1E6CF8648456944C597E /* Pods_GroupMakerTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_GroupMakerTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		F261EC7D229C01DD00C483D1 /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
 		F261EC7F229C031700C483D1 /* GroupViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GroupViewController.swift; sourceTree = "<group>"; };
 		F261EC81229C037100C483D1 /* MyProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyProfileViewController.swift; sourceTree = "<group>"; };
@@ -79,6 +94,11 @@
 		F261EC87229D36BD00C483D1 /* Student.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Student.swift; sourceTree = "<group>"; };
 		F261EC89229D36D500C483D1 /* Group.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Group.swift; sourceTree = "<group>"; };
 		F261EC8B229D37C200C483D1 /* Assignment.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Assignment.swift; sourceTree = "<group>"; };
+		F261EC9122A23B0300C483D1 /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; name = README.md; path = Pods/iOSDropDown/README.md; sourceTree = "<group>"; };
+		F261EC9322A23CD200C483D1 /* iOSDropDown.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = iOSDropDown.swift; path = Pods/iOSDropDown/iOSDropDown/Classes/iOSDropDown.swift; sourceTree = "<group>"; };
+		F261EC9622A23F1800C483D1 /* iOSDropDown.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = iOSDropDown.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		F261EC9822A24F7D00C483D1 /* CustomAlertViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomAlertViewController.swift; sourceTree = "<group>"; };
+		F261EC9A22A24FC000C483D1 /* CustomAlertViewDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomAlertViewDelegate.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -86,6 +106,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F261EC9722A23F1800C483D1 /* iOSDropDown.framework in Frameworks */,
+				232584F15E27941A094686F2 /* Pods_GroupMaker.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -93,6 +115,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				047384D6C01BC431684F034E /* Pods_GroupMakerTests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -100,12 +123,39 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4A05FCC4809A8F8012812748 /* Pods_GroupMakerUITests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		38EB63C1BC3BF6EF44084BB0 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				189538848142DEE9A4CA7F06 /* Pods-GroupMaker.debug.xcconfig */,
+				52F38315A9FC9C9A53532D94 /* Pods-GroupMaker.release.xcconfig */,
+				16DE337B09DEFEB81ACEEF12 /* Pods-GroupMakerTests.debug.xcconfig */,
+				91A8050DFE362D5F6B379D4B /* Pods-GroupMakerTests.release.xcconfig */,
+				364BBC06BAB62478B577C1EF /* Pods-GroupMakerUITests.debug.xcconfig */,
+				845AF815AF3D42141251B95D /* Pods-GroupMakerUITests.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
+		7F8DE5255D80CB8F76984EB3 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				F261EC9622A23F1800C483D1 /* iOSDropDown.framework */,
+				F261EC9322A23CD200C483D1 /* iOSDropDown.swift */,
+				F261EC9122A23B0300C483D1 /* README.md */,
+				7116EB642EA1CB1263486F48 /* Pods_GroupMaker.framework */,
+				ACEA1E6CF8648456944C597E /* Pods_GroupMakerTests.framework */,
+				65CEF198CE9F9F45A47F2CEA /* Pods_GroupMakerUITests.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		9634397B229664D4000CEA6E = {
 			isa = PBXGroup;
 			children = (
@@ -113,6 +163,8 @@
 				9634399E229664D5000CEA6E /* GroupMakerTests */,
 				963439A9229664D5000CEA6E /* GroupMakerUITests */,
 				96343985229664D4000CEA6E /* Products */,
+				38EB63C1BC3BF6EF44084BB0 /* Pods */,
+				7F8DE5255D80CB8F76984EB3 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -189,9 +241,11 @@
 			children = (
 				F261EC7D229C01DD00C483D1 /* MainViewController.swift */,
 				F261EC7F229C031700C483D1 /* GroupViewController.swift */,
+				F261EC9822A24F7D00C483D1 /* CustomAlertViewController.swift */,
 				F261EC81229C037100C483D1 /* MyProfileViewController.swift */,
 				F261EC83229C037F00C483D1 /* ProfileViewController.swift */,
 				F261EC85229C040B00C483D1 /* PeopleViewController.swift */,
+				F261EC9A22A24FC000C483D1 /* CustomAlertViewDelegate.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -212,9 +266,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 963439AF229664D5000CEA6E /* Build configuration list for PBXNativeTarget "GroupMaker" */;
 			buildPhases = (
+				92360EADE95D7D256635573F /* [CP] Check Pods Manifest.lock */,
 				96343980229664D4000CEA6E /* Sources */,
 				96343981229664D4000CEA6E /* Frameworks */,
 				96343982229664D4000CEA6E /* Resources */,
+				FFDC28499B94A99CC4532D04 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -229,6 +285,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 963439B2229664D5000CEA6E /* Build configuration list for PBXNativeTarget "GroupMakerTests" */;
 			buildPhases = (
+				6A464EA754A398DE1EDB26B3 /* [CP] Check Pods Manifest.lock */,
 				96343997229664D5000CEA6E /* Sources */,
 				96343998229664D5000CEA6E /* Frameworks */,
 				96343999229664D5000CEA6E /* Resources */,
@@ -247,6 +304,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 963439B5229664D5000CEA6E /* Build configuration list for PBXNativeTarget "GroupMakerUITests" */;
 			buildPhases = (
+				88D2D23C8D3F472AC763D2F5 /* [CP] Check Pods Manifest.lock */,
 				963439A2229664D5000CEA6E /* Sources */,
 				963439A3229664D5000CEA6E /* Frameworks */,
 				963439A4229664D5000CEA6E /* Resources */,
@@ -336,11 +394,98 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		6A464EA754A398DE1EDB26B3 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-GroupMakerTests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		88D2D23C8D3F472AC763D2F5 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-GroupMakerUITests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		92360EADE95D7D256635573F /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-GroupMaker-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		FFDC28499B94A99CC4532D04 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-GroupMaker/Pods-GroupMaker-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-GroupMaker/Pods-GroupMaker-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-GroupMaker/Pods-GroupMaker-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		96343980229664D4000CEA6E /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F261EC9B22A24FC000C483D1 /* CustomAlertViewDelegate.swift in Sources */,
 				F261EC8A229D36D500C483D1 /* Group.swift in Sources */,
 				F261EC84229C037F00C483D1 /* ProfileViewController.swift in Sources */,
 				F261EC86229C040B00C483D1 /* PeopleViewController.swift in Sources */,
@@ -353,6 +498,7 @@
 				9602B8C9229F8B80001CBE05 /* Skill.swift in Sources */,
 				9602B8CB229F93DF001CBE05 /* Helper.swift in Sources */,
 				F261EC8C229D37C200C483D1 /* Assignment.swift in Sources */,
+				F261EC9922A24F7D00C483D1 /* CustomAlertViewController.swift in Sources */,
 				F261EC88229D36BD00C483D1 /* Student.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -518,6 +664,7 @@
 		};
 		963439B0229664D5000CEA6E /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 189538848142DEE9A4CA7F06 /* Pods-GroupMaker.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -535,6 +682,7 @@
 		};
 		963439B1229664D5000CEA6E /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 52F38315A9FC9C9A53532D94 /* Pods-GroupMaker.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -552,6 +700,7 @@
 		};
 		963439B3229664D5000CEA6E /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 16DE337B09DEFEB81ACEEF12 /* Pods-GroupMakerTests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -572,6 +721,7 @@
 		};
 		963439B4229664D5000CEA6E /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 91A8050DFE362D5F6B379D4B /* Pods-GroupMakerTests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -592,6 +742,7 @@
 		};
 		963439B6229664D5000CEA6E /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 364BBC06BAB62478B577C1EF /* Pods-GroupMakerUITests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
@@ -611,6 +762,7 @@
 		};
 		963439B7229664D5000CEA6E /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 845AF815AF3D42141251B95D /* Pods-GroupMakerUITests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;

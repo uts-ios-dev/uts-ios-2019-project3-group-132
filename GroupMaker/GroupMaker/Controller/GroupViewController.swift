@@ -17,6 +17,7 @@ class GroupViewController: UIViewController, UITableViewDataSource, UITableViewD
     @IBOutlet weak var membersLbl: UILabel!
     @IBOutlet weak var addMemberBtn: UIButton!
     @IBOutlet weak var memberTableView: UITableView!
+    @IBOutlet weak var maxGroupSizeLbl: UILabel!
     
     //MARK: Action
     @IBAction func addBtnPressed(_ sender: UIButton) {
@@ -43,6 +44,7 @@ class GroupViewController: UIViewController, UITableViewDataSource, UITableViewD
             titleLbl.text = group.name
             subjectLbl.text = "Subject Id: \(group.subjectId)"
             assignmentLbl.text = "Assignment: \(group.assignment.name)"
+            maxGroupSizeLbl.text = "Max Group Size: \(group.maxGroupSize)"
             
             // Disable button if the group has max number of members
             if (group.isGroupFull) {
