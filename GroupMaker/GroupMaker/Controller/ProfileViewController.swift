@@ -16,6 +16,8 @@ class ProfileViewController: UIViewController, UITableViewDelegate, UITableViewD
     @IBOutlet weak var skillsTableView: UITableView!
     @IBOutlet weak var interestsTableView: UITableView!
     @IBOutlet weak var backBtn: UIButton!
+    @IBOutlet weak var fullNameLbl: UILabel!
+    @IBOutlet weak var studentNumberLbl: UILabel!
     
     // MARK: Action
     @IBAction func backBtnPressed(_ sender: UIButton) {
@@ -31,6 +33,8 @@ class ProfileViewController: UIViewController, UITableViewDelegate, UITableViewD
         
         if let profile = currentProfile {
             titleLbl.text = profile.preferredName
+            studentNumberLbl.text = "Student Number: \(profile.studentId)"
+            fullNameLbl.text = "Full Name: \(profile.fullName)"
         }
     }
     

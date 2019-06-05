@@ -14,18 +14,24 @@ class MyProfileViewController: UIViewController {
     @IBOutlet weak var textPrefferedName: UITextField!
     @IBOutlet weak var textStudentId: UITextField!
     
+    var currentStudent =  Student(fullName: "Jenny Smith", preferredName: "Jenny", studentId: "10639437")
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
-        let thisStudent = Student(fullName: "Morgan Stark", preferredName: "Morgan", studentId: "10639437")
-        textFullName.text = thisStudent.fullName
-        textPrefferedName.text = thisStudent.preferredName
-        textStudentId.text = thisStudent.studentId
-        
+        textFullName.text = currentStudent.fullName
+        textPrefferedName.text = currentStudent.preferredName
+        textStudentId.text = currentStudent.studentId
     }
     
-
+    
+    @IBAction func saveBtnPressed(_ sender: Any) {
+        currentStudent.fullName = textFullName.text!
+        currentStudent.preferredName = textPrefferedName.text!
+        currentStudent.studentId = textStudentId.text!
+    }
+    
     /*
     // MARK: - Navigation
 

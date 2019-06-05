@@ -10,12 +10,6 @@
 		047384D6C01BC431684F034E /* Pods_GroupMakerTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = ACEA1E6CF8648456944C597E /* Pods_GroupMakerTests.framework */; };
 		232584F15E27941A094686F2 /* Pods_GroupMaker.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7116EB642EA1CB1263486F48 /* Pods_GroupMaker.framework */; };
 		4A05FCC4809A8F8012812748 /* Pods_GroupMakerUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 65CEF198CE9F9F45A47F2CEA /* Pods_GroupMakerUITests.framework */; };
-		4FF2B79A229E5415003D7382 /* profile-icon.png in Resources */ = {isa = PBXBuildFile; fileRef = 4FF2B797229E5415003D7382 /* profile-icon.png */; };
-		4FF2B79B229E5415003D7382 /* home-icon.png in Resources */ = {isa = PBXBuildFile; fileRef = 4FF2B798229E5415003D7382 /* home-icon.png */; };
-		4FF2B79C229E5415003D7382 /* groups-icon.png in Resources */ = {isa = PBXBuildFile; fileRef = 4FF2B799229E5415003D7382 /* groups-icon.png */; };
-		4FF2B7A0229E618A003D7382 /* profile-pic.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 4FF2B79F229E6189003D7382 /* profile-pic.jpg */; };
-		4FF2B7AB229E6871003D7382 /* interests-button.png in Resources */ = {isa = PBXBuildFile; fileRef = 4FF2B7A9229E6871003D7382 /* interests-button.png */; };
-		4FF2B7AC229E6871003D7382 /* skills-button.png in Resources */ = {isa = PBXBuildFile; fileRef = 4FF2B7AA229E6871003D7382 /* skills-button.png */; };
 		9602B8C7229F5302001CBE05 /* Invitation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9602B8C6229F5302001CBE05 /* Invitation.swift */; };
 		9602B8C9229F8B80001CBE05 /* Skill.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9602B8C8229F8B80001CBE05 /* Skill.swift */; };
 		9602B8CB229F93DF001CBE05 /* Helper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9602B8CA229F93DF001CBE05 /* Helper.swift */; };
@@ -59,12 +53,6 @@
 		16DE337B09DEFEB81ACEEF12 /* Pods-GroupMakerTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GroupMakerTests.debug.xcconfig"; path = "Target Support Files/Pods-GroupMakerTests/Pods-GroupMakerTests.debug.xcconfig"; sourceTree = "<group>"; };
 		189538848142DEE9A4CA7F06 /* Pods-GroupMaker.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GroupMaker.debug.xcconfig"; path = "Target Support Files/Pods-GroupMaker/Pods-GroupMaker.debug.xcconfig"; sourceTree = "<group>"; };
 		364BBC06BAB62478B577C1EF /* Pods-GroupMakerUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GroupMakerUITests.debug.xcconfig"; path = "Target Support Files/Pods-GroupMakerUITests/Pods-GroupMakerUITests.debug.xcconfig"; sourceTree = "<group>"; };
-		4FF2B797229E5415003D7382 /* profile-icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "profile-icon.png"; sourceTree = "<group>"; };
-		4FF2B798229E5415003D7382 /* home-icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "home-icon.png"; sourceTree = "<group>"; };
-		4FF2B799229E5415003D7382 /* groups-icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "groups-icon.png"; sourceTree = "<group>"; };
-		4FF2B79F229E6189003D7382 /* profile-pic.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "profile-pic.jpg"; sourceTree = "<group>"; };
-		4FF2B7A9229E6871003D7382 /* interests-button.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "interests-button.png"; sourceTree = "<group>"; };
-		4FF2B7AA229E6871003D7382 /* skills-button.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "skills-button.png"; sourceTree = "<group>"; };
 		52F38315A9FC9C9A53532D94 /* Pods-GroupMaker.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GroupMaker.release.xcconfig"; path = "Target Support Files/Pods-GroupMaker/Pods-GroupMaker.release.xcconfig"; sourceTree = "<group>"; };
 		65CEF198CE9F9F45A47F2CEA /* Pods_GroupMakerUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_GroupMakerUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		7116EB642EA1CB1263486F48 /* Pods_GroupMaker.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_GroupMaker.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -181,12 +169,6 @@
 		96343986229664D4000CEA6E /* GroupMaker */ = {
 			isa = PBXGroup;
 			children = (
-				4FF2B799229E5415003D7382 /* groups-icon.png */,
-				4FF2B7A9229E6871003D7382 /* interests-button.png */,
-				4FF2B7AA229E6871003D7382 /* skills-button.png */,
-				4FF2B79F229E6189003D7382 /* profile-pic.jpg */,
-				4FF2B798229E5415003D7382 /* home-icon.png */,
-				4FF2B797229E5415003D7382 /* profile-icon.png */,
 				96343996229664D5000CEA6E /* Info.plist */,
 				FF4EAE552296716300C40B47 /* Settings */,
 				FF4EAE54229670EA00C40B47 /* Controller */,
@@ -368,13 +350,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				96343992229664D5000CEA6E /* Assets.xcassets in Resources */,
-				4FF2B79A229E5415003D7382 /* profile-icon.png in Resources */,
 				9634398D229664D4000CEA6E /* Main.storyboard in Resources */,
-				4FF2B7AB229E6871003D7382 /* interests-button.png in Resources */,
-				4FF2B79B229E5415003D7382 /* home-icon.png in Resources */,
-				4FF2B7A0229E618A003D7382 /* profile-pic.jpg in Resources */,
-				4FF2B79C229E5415003D7382 /* groups-icon.png in Resources */,
-				4FF2B7AC229E6871003D7382 /* skills-button.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
