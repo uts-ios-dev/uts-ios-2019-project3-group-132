@@ -12,16 +12,18 @@ class Invitation {
     
     //MARK: Constants
     let invitationId: String
-    let groupId: String
+    let group: Group
     let studentId: String
+    let inviteeName: String
     
     //MARK: Variables
     var accepted = false //by default invitation is not yet accepted until user tap on accept button then it changes to true
     
     //MARK: Initialisers
-    init(invitationId: String, groupId: String, studentId: String) {
+    init(invitationId: String, group: Group, studentId: String, inviteeName: String) {
         self.invitationId = invitationId
-        self.groupId = groupId
+        self.group = group
         self.studentId = studentId
+        self.inviteeName = inviteeName
     }
 }

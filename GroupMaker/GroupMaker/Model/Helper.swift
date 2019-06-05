@@ -58,11 +58,15 @@ class Helper {
     }
     
     static func getGroups() -> Array<Group> {
-        
-        
         return [
             Group(groupId: "1", name: "Da Best Group", subjectId: "1", assignment: Helper.getAssignments()[0], groupSize: 3, members: [Helper.getStudents()[0], Helper.getStudents()[1]]),
             Group(groupId: "2", name: "iOS Assignment 2", subjectId: "1", assignment: Helper.getAssignments()[1], groupSize: 3, members: [Helper.getStudents()[0], Helper.getStudents()[1], Helper.getStudents()[2]])
+        ]
+    }
+    
+    static func getInvites() -> Array<Invitation> {
+        return [
+            Invitation(invitationId: "1", group: Group(groupId: "3", name: "iOS Assignment 3", subjectId: "1", assignment: Helper.getAssignments()[0], groupSize: 5, member: Helper.getStudents()[1]), studentId: "1", inviteeName: "George")
         ]
     }
     
@@ -76,6 +80,10 @@ class Helper {
     
     static func getAssignmentWithName(name: String) -> Assignment? {
         return Helper.getAssignments().first(where: {$0.name == name})
+    }
+    
+    static func getGroupById(groupId: String) -> Group? {
+        return Helper.getGroups().first(where: {$0.groupId == groupId})
     }
     
     static func getStudents() -> Array<Student> {

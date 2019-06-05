@@ -8,7 +8,29 @@
 
 import UIKit
 
-class MainViewController: UIViewController, UITableViewDataSource, UITableViewDelegate {
+protocol CellDelegate: class {
+    func acceptButtonPressed(_ sender: UIButton)
+    
+    func declineButtonPressed(_ sender: UIButton)
+}
+
+class InviteTableViewCell: UITableViewCell {
+    @IBOutlet weak var groupNameLbl: UILabel!
+    @IBOutlet weak var acceptBtn: UIButton!
+    @IBOutlet weak var declineBtn: UIButton!
+    
+    weak var delegate: CellDelegate?
+    
+    @IBAction func acceptBtnPressed(_ sender: UIButton) {
+        delegate?.acceptButtonPressed(sender)
+    }
+    
+    @IBAction func declineBtnPressed(_ sender: UIButton) {
+        delegate?.declineButtonPressed(sender)
+    }
+}
+
+class MainViewController: UIViewController, UITableViewDataSource, UITableViewDelegate, CellDelegate {
     
     // MARK: Outlet
     @IBOutlet weak var GroupsStackView: UIStackView!
@@ -18,6 +40,8 @@ class MainViewController: UIViewController, UITableViewDataSource, UITableViewDe
     @IBOutlet weak var CreateGroupBtn: UIButton!
     
     @IBOutlet weak var GroupTableView: UITableView!
+    
+    @IBOutlet weak var InvitesTableView: UITableView!
     
     @IBOutlet weak var SwitcherGroupsInvites: UISegmentedControl!
     
@@ -51,6 +75,7 @@ class MainViewController: UIViewController, UITableViewDataSource, UITableViewDe
     
     //TODO: Not hardcode this list
     var groupList: Array<Group> = Helper.getGroups()
+    var inviteList: Array<Invitation> = Helper.getInvites()
     
     // MARK: Initialiser
     override func viewDidLoad() {
@@ -58,30 +83,112 @@ class MainViewController: UIViewController, UITableViewDataSource, UITableViewDe
 
         GroupTableView.dataSource = self
         GroupTableView.delegate = self
+        
+        InvitesTableView.dataSource = self
+        InvitesTableView.delegate = self
+        
+        //Call this to ensure both aren't displayed on first loading
+        SwitchGroupsInvites(self.SwitcherGroupsInvites)
     }
     
     // MARK: TableView
     
     // Datasource Functions
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return groupList.count
+        var count: Int?
+        
+        if tableView == GroupTableView {
+            count = groupList.count
+        }
+        
+        if tableView == InvitesTableView {
+            count = inviteList.count
+        }
+        
+        return count!
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        var cellToReturn = UITableViewCell()
+        if tableView == GroupTableView {
+            let cell = GroupTableView.dequeueReusableCell(withIdentifier: "cellGroup", for: indexPath)
+            
+            let group = groupList[indexPath.row]
+            cell.textLabel?.text = group.name
+            cell.detailTextLabel?.text = "No. of Members: \(group.size)"
+            
+            cellToReturn = cell
+        } else if tableView == InvitesTableView {
+            let cell = InvitesTableView.dequeueReusableCell(withIdentifier: "inviteCell", for: indexPath) as! InviteTableViewCell
+            
+            let invite = inviteList[indexPath.row]
+            cell.delegate = self
+            cell.groupNameLbl.text = "\(invite.group.name)"
+            
+            cellToReturn = cell
+        }
         
-        let cell = GroupTableView.dequeueReusableCell(withIdentifier: "cellGroup", for: indexPath)
-        
-        let group = groupList[indexPath.row]
-        cell.textLabel?.text = group.name
-        cell.detailTextLabel?.text = "No. of Members: \(group.size)"
-        
-        return cell
+        return cellToReturn
     }
     
     // Delegate
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        //getting the index path of selected row
-        self.performSegue(withIdentifier: "showGroup", sender: self)
+        if (tableView == GroupTableView) {
+            //getting the index path of selected row
+            self.performSegue(withIdentifier: "showGroup", sender: self)
+        }
+        
+        if (tableView == InvitesTableView) {
+            //getting the index path of selected row
+            self.performSegue(withIdentifier: "showGroupInvitation", sender: self)
+        }
+    }
+    
+    // MARK: Cell Delegate
+    func acceptButtonPressed(_ sender: UIButton) {
+        if let indexPath = getCurrentCellIndexPath(sender){
+            // Get the current invite
+            let item = inviteList[indexPath.row]
+            
+            // Add group to current groups
+            item.group.addGroupMember(student: Helper.getStudents()[0])
+            groupList.append(item.group)
+            
+            // Remove it from the invite list
+            inviteList = inviteList.filter({$0.invitationId != item.invitationId})
+            
+            self.refresh()
+        }
+    }
+    
+    func declineButtonPressed(_ sender: UIButton) {
+        if let indexPath = getCurrentCellIndexPath(sender){
+            // Get the current invite
+            let item = inviteList[indexPath.row]
+            
+            // Remove it from the invite list
+            inviteList = inviteList.filter({$0.invitationId != item.invitationId})
+            
+            self.refresh()
+        }
+    }
+    
+    func getCurrentCellIndexPath(_ sender: UIButton) -> IndexPath? {
+        let buttonPosition = sender.convert(CGPoint.zero, to: InvitesTableView)
+        if let indexPath: IndexPath = InvitesTableView.indexPathForRow(at: buttonPosition) {
+            return indexPath
+        }
+        
+        InvitesTableView.indexPath
+        return nil
+    }
+    
+    // MARK: - Other functions
+    
+    func refresh() {
+        //Refresh the two tables data
+        InvitesTableView.reloadData()
+        GroupTableView.reloadData()
     }
     
     // MARK: - Navigation
@@ -95,9 +202,22 @@ class MainViewController: UIViewController, UITableViewDataSource, UITableViewDe
             // upcoming is set to NewViewController (.swift)
             let upcoming: GroupViewController = segue.destination as! GroupViewController
             // indexPath is set to the path that was tapped
-            let indexPath = self.GroupTableView.indexPathForSelectedRow
+            let indexPath = GroupTableView.indexPathForSelectedRow
             // Group is set to the title at the row in the objects array.
             let selectedGroup = self.groupList[(indexPath?.row)!]
+            // the Group property of GroupViewController is set.
+            upcoming.currentGroup = selectedGroup
+            self.GroupTableView.deselectRow(at: indexPath!, animated: true)
+        }
+        
+        if (segue.identifier == "showGroupInvitation")
+        {
+            // upcoming is set to NewViewController (.swift)
+            let upcoming: GroupInvitationViewController = segue.destination as! GroupInvitationViewController
+            // indexPath is set to the path that was tapped
+            let indexPath = InvitesTableView.indexPathForSelectedRow
+            // Group is set to the title at the row in the objects array.
+            let selectedGroup = self.inviteList[(indexPath?.row)!].group
             // the Group property of GroupViewController is set.
             upcoming.currentGroup = selectedGroup
             self.GroupTableView.deselectRow(at: indexPath!, animated: true)

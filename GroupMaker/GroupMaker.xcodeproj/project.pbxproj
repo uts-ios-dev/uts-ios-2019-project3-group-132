@@ -30,6 +30,7 @@
 		F261EC9722A23F1800C483D1 /* iOSDropDown.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F261EC9622A23F1800C483D1 /* iOSDropDown.framework */; };
 		F261EC9922A24F7D00C483D1 /* CustomAlertViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F261EC9822A24F7D00C483D1 /* CustomAlertViewController.swift */; };
 		F261EC9B22A24FC000C483D1 /* CustomAlertViewDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F261EC9A22A24FC000C483D1 /* CustomAlertViewDelegate.swift */; };
+		F261EC9D22A7830B00C483D1 /* GroupInvitationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F261EC9C22A7830B00C483D1 /* GroupInvitationViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -87,6 +88,7 @@
 		F261EC9622A23F1800C483D1 /* iOSDropDown.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = iOSDropDown.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		F261EC9822A24F7D00C483D1 /* CustomAlertViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomAlertViewController.swift; sourceTree = "<group>"; };
 		F261EC9A22A24FC000C483D1 /* CustomAlertViewDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomAlertViewDelegate.swift; sourceTree = "<group>"; };
+		F261EC9C22A7830B00C483D1 /* GroupInvitationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GroupInvitationViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -228,6 +230,7 @@
 				F261EC83229C037F00C483D1 /* ProfileViewController.swift */,
 				F261EC85229C040B00C483D1 /* PeopleViewController.swift */,
 				F261EC9A22A24FC000C483D1 /* CustomAlertViewDelegate.swift */,
+				F261EC9C22A7830B00C483D1 /* GroupInvitationViewController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -468,6 +471,7 @@
 				F261EC82229C037100C483D1 /* MyProfileViewController.swift in Sources */,
 				F261EC80229C031700C483D1 /* GroupViewController.swift in Sources */,
 				F261EC7E229C01DD00C483D1 /* MainViewController.swift in Sources */,
+				F261EC9D22A7830B00C483D1 /* GroupInvitationViewController.swift in Sources */,
 				96343990229664D4000CEA6E /* GroupMaker.xcdatamodeld in Sources */,
 				96343988229664D4000CEA6E /* AppDelegate.swift in Sources */,
 				9602B8C7229F5302001CBE05 /* Invitation.swift in Sources */,
