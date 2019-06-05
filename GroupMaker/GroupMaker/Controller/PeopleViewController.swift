@@ -8,68 +8,93 @@
 
 import UIKit
 
-class PeopleViewController: UIViewController {
+protocol PeopleCellDelegate: class {
+    func inviteButtonPressed(_ sender: UIButton)
+}
+
+class PeopleCustomCell: UITableViewCell {
+    
+    @IBOutlet weak var nameLbl: UILabel!
+    @IBOutlet weak var inviteBtn: UIButton!
+    
+    weak var delegate: PeopleCellDelegate?
+    @IBAction func inviteBtnPressed(_ sender: UIButton) {
+        delegate?.inviteButtonPressed(sender)
+    }
+}
+
+class PeopleViewController: UIViewController, UITableViewDataSource, UITableViewDelegate, PeopleCellDelegate {
     
     @IBOutlet weak var backBtn: UIButton!
+    @IBOutlet weak var peopleTableView: UITableView!
     
     @IBAction func backBtnPressed(_ sender: UIButton) {
         dismiss(animated: true, completion: nil)
     }
     
+    //Current assignment list it's showing
+    var currentAssignment: Assignment? = nil
+    var listStudents: Array<Student> = Array<Student>()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        /*
-         //Hard Code for a list of students
-         var studentArray: Array<Student> = Array<Student>()
-         let student_1 = Student(fullName: "aaa", preferredName: "aaaa", studentId: "1")
-         student_1.assignmentExpectation = "P"
-         studentArray.append(student_1)
-         
-         let student_2 = Student(fullName: "bbb", preferredName: "bbbb", studentId: "2")
-         student_2.assignmentExpectation = "D"
-         studentArray.append(student_2)
-         
-         let student_3 = Student(fullName: "ccc", preferredName: "cccc", studentId: "3")
-         student_3.assignmentExpectation = "C"
-         studentArray.append(student_3)
-         
-         let student_4 = Student(fullName: "ddd", preferredName: "dddd", studentId: "4")
-         student_4.assignmentExpectation = "HD"
-         studentArray.append(student_4)
-         
-         let student_5 = Student(fullName: "eee", preferredName: "eeee", studentId: "5")
-         student_5.assignmentExpectation = "HD"
-         studentArray.append(student_5)
-         
-         let student_6 = Student(fullName: "fff", preferredName: "ffff", studentId: "6")
-         student_1.assignmentExpectation = "C"
-         studentArray.append(student_6)
-         
-         let student_7 = Student(fullName: "ggg", preferredName: "gggg", studentId: "7")
-         student_7.assignmentExpectation = "D"
-         studentArray.append(student_7)
-         
-         let student_8 = Student(fullName: "hhh", preferredName: "hhhh", studentId: "8")
-         student_1.assignmentExpectation = "P"
-         studentArray.append(student_8)
-        */
-        
-        
         // Do any additional setup after loading the view.
+        peopleTableView.dataSource = self
+        peopleTableView.delegate = self
+        
+        if let assignment = currentAssignment {
+            listStudents = assignment.students
+            
+            //Do sorting/ removal of students based on algo here:
+            // Ensure to remove current user (morgan) and those already in a group
+            
+        }
     }
     
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return listStudents.count
+    }
     
- 
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        var cellToReturn = UITableViewCell()
+        if tableView == peopleTableView {
+            let cell = peopleTableView.dequeueReusableCell(withIdentifier: "cellPerson", for: indexPath) as! PeopleCustomCell
+            
+            let student = listStudents[indexPath.row]
+            cell.nameLbl.text = "\(indexPath.row + 1): \(student.preferredName)"
+            cell.delegate = self
+            
+            cellToReturn = cell
+        }
+        
+        return cellToReturn
+    }
     
-    /*
-    // MARK: - Navigation
-
+    // Delegate
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        //getting the index path of selected row
+        self.performSegue(withIdentifier: "showProfileSegue", sender: self)
+    }
+    
+    func inviteButtonPressed(_ sender: UIButton) {
+        //Do something here
+    }
+    
     // In a storyboard-based application, you will often want to do a little preparation before navigation
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         // Get the new view controller using segue.destination.
         // Pass the selected object to the new view controller.
+        if (segue.identifier == "showProfileSegue")
+        {
+            let upcoming: ProfileViewController = segue.destination as! ProfileViewController
+            // indexPath is set to the path that was tapped
+            let indexPath = self.peopleTableView.indexPathForSelectedRow
+            // Group is set to the title at the row in the objects array.
+            let selectedPerson = self.listStudents[(indexPath?.row)!]
+            upcoming.currentProfile = selectedPerson
+            self.peopleTableView.deselectRow(at: indexPath!, animated: true)
+        }
     }
-    */
 
 }

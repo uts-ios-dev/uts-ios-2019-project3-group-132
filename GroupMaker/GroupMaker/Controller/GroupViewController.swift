@@ -82,15 +82,19 @@ class GroupViewController: UIViewController, UITableViewDataSource, UITableViewD
         // Pass the selected object to the new view controller.
         if (segue.identifier == "showProfileSegue")
         {
-            // upcoming is set to NewViewController (.swift)
             let upcoming: ProfileViewController = segue.destination as! ProfileViewController
             // indexPath is set to the path that was tapped
             let indexPath = self.memberTableView.indexPathForSelectedRow
             // Group is set to the title at the row in the objects array.
             let selectedMember = self.currentGroup?.members[(indexPath?.row)!]
-            // the Group property of GroupViewController is set.
             upcoming.currentProfile = selectedMember
             self.memberTableView.deselectRow(at: indexPath!, animated: true)
+        }
+        
+        if (segue.identifier == "showPeopleSegue") {
+            let upcoming: PeopleViewController = segue.destination as! PeopleViewController
+            // Set assignment on people view controller
+            upcoming.currentAssignment = currentGroup?.assignment
         }
     }
 }

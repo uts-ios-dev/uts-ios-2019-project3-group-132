@@ -72,8 +72,8 @@ class Helper {
     
     static func getAssignments() -> Array<Assignment> {
         return [
-            Assignment(assignmentId: "1", name: "iOS: Assignment 1", subject: "iOS Application Development"),
-            Assignment(assignmentId: "2", name: "iOS: Assignment 2", subject: "iOS Application Development"),
+            Assignment(assignmentId: "1", name: "iOS: Assignment 1", subject: "iOS Application Development", students: getStudents()),
+            Assignment(assignmentId: "2", name: "iOS: Assignment 2", subject: "iOS Application Development", students: getStudents()),
             Assignment(assignmentId: "3", name: "ITOM: Assignment 1", subject: "ITOM")
         ]
     }

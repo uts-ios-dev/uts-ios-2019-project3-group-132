@@ -488,6 +488,39 @@
                                 <rect key="frame" x="20" y="138" width="374" height="677"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="cellPerson" id="nLO-zk-K4y" customClass="PeopleCustomCell" customModule="GroupMaker" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="28" width="374" height="44"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="nLO-zk-K4y" id="r9U-C8-eHx">
+                                            <rect key="frame" x="0.0" y="0.0" width="374" height="43.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="HDV-xO-547">
+                                                    <rect key="frame" x="20" y="11" width="266" height="21"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="h9Z-0p-4Lm">
+                                                    <rect key="frame" x="321" y="6" width="37" height="30"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <state key="normal" title="Invite">
+                                                        <color key="titleColor" red="0.17943827300000001" green="0.70006967249999996" blue="0.11103697110000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                    </state>
+                                                    <connections>
+                                                        <action selector="inviteBtnPressed:" destination="nLO-zk-K4y" eventType="touchUpInside" id="jzP-Mu-Q8R"/>
+                                                    </connections>
+                                                </button>
+                                            </subviews>
+                                        </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="inviteBtn" destination="h9Z-0p-4Lm" id="mYE-tN-mPm"/>
+                                            <outlet property="nameLbl" destination="HDV-xO-547" id="Ifr-z0-HYk"/>
+                                        </connections>
+                                    </tableViewCell>
+                                </prototypes>
                             </tableView>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="O9U-0e-U0p">
                                 <rect key="frame" x="26" y="44" width="34" height="30"/>
@@ -510,6 +543,8 @@
                     </view>
                     <connections>
                         <outlet property="backBtn" destination="O9U-0e-U0p" id="aOA-1u-cJu"/>
+                        <outlet property="peopleTableView" destination="Gen-nv-ySv" id="K03-L5-QhQ"/>
+                        <segue destination="WpB-9G-zJu" kind="show" identifier="showProfileSegue" id="CK9-NO-4Qz"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="lUo-7w-7Y6" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -728,6 +763,6 @@
         <image name="skills-button.png" width="291" height="68"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="8I9-no-Ohu"/>
+        <segue reference="AQ1-ZO-URJ"/>
     </inferredMetricsTieBreakers>
 </document>
