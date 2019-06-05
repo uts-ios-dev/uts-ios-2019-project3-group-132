@@ -89,6 +89,8 @@ class MainViewController: UIViewController, UITableViewDataSource, UITableViewDe
         
         //Call this to ensure both aren't displayed on first loading
         SwitchGroupsInvites(self.SwitcherGroupsInvites)
+        // Update title with invite count
+        SwitcherGroupsInvites.setTitle("Invites (\(inviteList.count))", forSegmentAt: 1)
     }
     
     // MARK: TableView
@@ -189,6 +191,7 @@ class MainViewController: UIViewController, UITableViewDataSource, UITableViewDe
         //Refresh the two tables data
         InvitesTableView.reloadData()
         GroupTableView.reloadData()
+        SwitcherGroupsInvites.setTitle("Invites (\(inviteList.count))", forSegmentAt: 1)
     }
     
     // MARK: - Navigation
