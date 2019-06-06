@@ -69,7 +69,7 @@ class Helper {
     static func getGroups() -> Array<Group> {
         return [
             Group(groupId: "1", name: "iOS Assignment 1", subjectId: "1", assignment: Helper.getAssignments()[0], groupSize: 3, members: [Helper.getStudents()[0], Helper.getStudents()[1]]),
-            Group(groupId: "2", name: "iOS Assignment 2", subjectId: "1", assignment: Helper.getAssignments()[1], groupSize: 4, members: [Helper.getStudents()[0], Helper.getStudents()[3], Helper.getStudents()[4]])
+            Group(groupId: "2", name: "iOS Assignment 2", subjectId: "1", assignment: Helper.getAssignments()[1], groupSize: 3, members: [Helper.getStudents()[0], Helper.getStudents()[3], Helper.getStudents()[4]])
         ]
     }
     
@@ -82,8 +82,8 @@ class Helper {
     
     static func getAssignments() -> Array<Assignment> {
         return [
-            Assignment(assignmentId: "1", name: "iOS: Assignment 1", subject: "iOS Application Development", students: getStudents(), skills: [Skill(skillId: "10001", skillName: "iOS programing", skillPoint: 10), Skill(skillId: "10002", skillName: "UI Design", skillPoint: 5)]),
-            Assignment(assignmentId: "2", name: "iOS: Assignment 2", subject: "iOS Application Development", students: getStudents(), skills: [Skill(skillId: "10001", skillName: "iOS programing", skillPoint: 10), Skill(skillId: "10002", skillName: "UI Design", skillPoint: 5), Skill(skillId: "10003", skillName: "Project Management", skillPoint: 15), Skill(skillId: "10004", skillName: "Graphic design", skillPoint: 5)]),
+            Assignment(assignmentId: "1", name: "iOS Assignment 1", subject: "iOS Application Development", students: getStudents(), skills: [Skill(skillId: "10001", skillName: "iOS programing", skillPoint: 10), Skill(skillId: "10002", skillName: "UI Design", skillPoint: 5)]),
+            Assignment(assignmentId: "2", name: "iOS Assignment 2", subject: "iOS Application Development", students: getStudents(), skills: [Skill(skillId: "10001", skillName: "iOS programing", skillPoint: 10), Skill(skillId: "10002", skillName: "UI Design", skillPoint: 5), Skill(skillId: "10003", skillName: "Project Management", skillPoint: 15), Skill(skillId: "10004", skillName: "Graphic design", skillPoint: 5)]),
             Assignment(assignmentId: "4", name: "L & R: Assignment 1", subject: "Lans and Routing", students: getStudents(), skills: [Skill(skillId: "10001", skillName: "iOS programing", skillPoint: 2), Skill(skillId: "10002", skillName: "UI Design", skillPoint: 5), Skill(skillId: "10003", skillName: "Project Management", skillPoint: 15), Skill(skillId: "10004", skillName: "Graphic design", skillPoint: 5)])
         ]
     }
