@@ -35,6 +35,7 @@ class PeopleViewController: UIViewController, UITableViewDataSource, UITableView
     //Current assignment list it's showing
     var currentAssignment: Assignment? = nil
     var listStudents: Array<Student> = Array<Student>()
+    var helper = Helper()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -47,7 +48,8 @@ class PeopleViewController: UIViewController, UITableViewDataSource, UITableView
             listStudents = assignment.students
             
             //Do sorting/ removal of students based on algo here
-            
+            helper.expectationSort(students: listStudents)
+            //helper.skillCalculator(student: Student, assignment: <#T##Assignment#>)
             
             // Ensure to remove current user (morgan) and those already in a group
             

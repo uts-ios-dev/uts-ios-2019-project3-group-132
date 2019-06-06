@@ -14,7 +14,7 @@ class MyProfileViewController: UIViewController {
     @IBOutlet weak var textPrefferedName: UITextField!
     @IBOutlet weak var textStudentId: UITextField!
     
-    var currentStudent =  Student(fullName: "Jenny Smith", preferredName: "Jenny", studentId: "10639437")
+    var currentStudent =  Student(fullName: "Morgan Stark", preferredName: "Morgan", studentId: "10639437", assignmentExpectation: "HD", skills: [Skill(skillId: "10001", skillName: "iOS programing", skillPoint: 10), Skill(skillId: "10002", skillName: "UI Design", skillPoint: 5)])
     
     override func viewDidLoad() {
         super.viewDidLoad()
