@@ -32,4 +32,12 @@ class Assignment {
         self.subject = subject
         self.students = students
     }
+    
+    init(assignmentId: String, name: String, subject: String, students: Array<Student>, skills: Array<Skill>){
+        self.assignmentId = assignmentId
+        self.name = name
+        self.subject = subject
+        self.students = students
+        self.skills = skills
+    }
 }
