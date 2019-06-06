@@ -16,6 +16,8 @@ class PeopleCustomCell: UITableViewCell {
     
     @IBOutlet weak var nameLbl: UILabel!
     @IBOutlet weak var inviteBtn: UIButton!
+    @IBOutlet weak var expectationLbl: UILabel!
+    @IBOutlet weak var scoreLbl: UILabel!
     
     weak var delegate: PeopleCellDelegate?
     @IBAction func inviteBtnPressed(_ sender: UIButton) {
@@ -49,15 +51,15 @@ class PeopleViewController: UIViewController, UITableViewDataSource, UITableView
             //Remove students that are already in the group
             listStudents = listStudents.filter{ !group.members.map{$0.studentId}.contains($0.studentId) }
             //Do sorting/ removal of students based on algo here
-            helper.expectationSort(students: listStudents)// sort by expectation
+            listStudents = helper.expectationSort(students: listStudents)// sort by expectation
             
-            //caculate skill total points for each student
+            //Caclulate skill total points for each student
             for i in 0..<listStudents.count {
                 helper.skillCalculator(student: listStudents[i], assignment: group.assignment)
             }
             
             //sort the student list by skill points
-            helper.skillSort(students: listStudents)
+            listStudents = helper.skillSort(students: listStudents)
             
         }
     }
@@ -74,6 +76,8 @@ class PeopleViewController: UIViewController, UITableViewDataSource, UITableView
             let student = listStudents[indexPath.row]
             cell.nameLbl.text = "\(indexPath.row + 1): \(student.preferredName)"
             cell.delegate = self
+            cell.expectationLbl.text = "Expectation: \(student.assignmentExpectation)"
+            cell.scoreLbl.text = "Skill Score: \(student.totalPoints)"
             
             cellToReturn = cell
         }
@@ -87,15 +91,23 @@ class PeopleViewController: UIViewController, UITableViewDataSource, UITableView
         self.performSegue(withIdentifier: "showProfileSegue", sender: self)
     }
     
+    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        return 77.0
+    }
+    
+    func tableView(_ tableView: UITableView, estimatedHeightForRowAt indexPath: IndexPath) -> CGFloat {
+        return 77.0
+    }
+    
     func inviteButtonPressed(_ sender: UIButton) {
         if let indexPath = getCurrentCellIndexPath(sender){
-            // Get the current invite
+            // Get the current student
             let student = listStudents[indexPath.row]
             
-            // Create invitiation for student
-            let newInvitation = Invitation(invitationId: "4", group: currentGroup!, studentId: student.studentId, inviteeName: Helper.getStudents()[0].fullName)
-            
-            //sender.currentTitle
+            // Button changes to indicate invite
+            sender.setTitle("Invited", for: .normal)
+            sender.isEnabled = false
+            sender.setTitleColor(UIColor.blue, for: .normal)
         }
         
     }

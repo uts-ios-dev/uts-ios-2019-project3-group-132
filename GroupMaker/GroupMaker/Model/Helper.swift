@@ -24,14 +24,14 @@ class Helper {
         }
     }
     
-    func skillSort (students: Array<Student>) {
-            students.sorted(by: { $0.totalPoints > $1.totalPoints })
+    func skillSort (students: Array<Student>) -> Array<Student> {
+            return students.sorted(by: { $0.totalPoints > $1.totalPoints })
     }
     
     
     
     //ExpectationSort is for putting together the students with same expected mark
-    func expectationSort(students: Array<Student>) {
+    func expectationSort(students: Array<Student>) -> Array<Student> {
         var studentArray = students
         //Get students of each expectation together
         for index in 0...studentArray.count - 1 {
@@ -61,6 +61,8 @@ class Helper {
                 studentArray.remove(at: index)
             }
         }
+        
+        return studentArray
     }
     
     static func getGroups() -> Array<Group> {
