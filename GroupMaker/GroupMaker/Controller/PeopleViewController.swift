@@ -49,14 +49,15 @@ class PeopleViewController: UIViewController, UITableViewDataSource, UITableView
             //Remove students that are already in the group
             listStudents = listStudents.filter{ !group.members.map{$0.studentId}.contains($0.studentId) }
             //Do sorting/ removal of students based on algo here
-            helper.expectationSort(students: listStudents)
+            helper.expectationSort(students: listStudents)// sort by expectation
             
+            //caculate skill total points for each student
             for i in 0..<listStudents.count {
                 helper.skillCalculator(student: listStudents[i], assignment: group.assignment)
             }
-            //helper.skillCalculator(student: Student, assignment: <#T##Assignment#>)
             
-            // Ensure to remove current user (morgan) and those already in a group
+            //sort the student list by skill points
+            helper.skillSort(students: listStudents)
             
         }
     }
