@@ -33,7 +33,7 @@ class PeopleViewController: UIViewController, UITableViewDataSource, UITableView
     }
     
     //Current assignment list it's showing
-    var currentAssignment: Assignment? = nil
+    var currentGroup: Group? = nil
     var listStudents: Array<Student> = Array<Student>()
     var helper = Helper()
     
@@ -44,9 +44,10 @@ class PeopleViewController: UIViewController, UITableViewDataSource, UITableView
         peopleTableView.dataSource = self
         peopleTableView.delegate = self
         
-        if let assignment = currentAssignment {
-            listStudents = assignment.students
-            
+        if let group = currentGroup {
+            listStudents = group.assignment.students
+            //Remove students that are already in the group
+            listStudents = listStudents.filter{ !group.members.map{$0.studentId}.contains($0.studentId) }
             //Do sorting/ removal of students based on algo here
             helper.expectationSort(students: listStudents)
             //helper.skillCalculator(student: Student, assignment: <#T##Assignment#>)
@@ -82,7 +83,26 @@ class PeopleViewController: UIViewController, UITableViewDataSource, UITableView
     }
     
     func inviteButtonPressed(_ sender: UIButton) {
-        //Do something here
+        if let indexPath = getCurrentCellIndexPath(sender){
+            // Get the current invite
+            let student = listStudents[indexPath.row]
+            
+            // Create invitiation for student
+            let newInvitation = Invitation(invitationId: "4", group: currentGroup!, studentId: student.studentId, inviteeName: Helper.getStudents()[0].fullName)
+            
+            //sender.currentTitle
+        }
+        
+    }
+    
+    func getCurrentCellIndexPath(_ sender: UIButton) -> IndexPath? {
+        let buttonPosition = sender.convert(CGPoint.zero, to: peopleTableView)
+        if let indexPath: IndexPath = peopleTableView.indexPathForRow(at: buttonPosition) {
+            return indexPath
+        }
+        
+        peopleTableView.indexPath
+        return nil
     }
     
     // In a storyboard-based application, you will often want to do a little preparation before navigation

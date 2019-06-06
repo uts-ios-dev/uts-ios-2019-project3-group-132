@@ -94,7 +94,9 @@ class GroupViewController: UIViewController, UITableViewDataSource, UITableViewD
         if (segue.identifier == "showPeopleSegue") {
             let upcoming: PeopleViewController = segue.destination as! PeopleViewController
             // Set assignment on people view controller
-            upcoming.currentAssignment = currentGroup?.assignment
+            if self.currentGroup != nil {
+                upcoming.currentGroup = currentGroup
+            }
         }
     }
 }
