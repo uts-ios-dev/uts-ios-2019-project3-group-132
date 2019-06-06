@@ -25,7 +25,7 @@ class Helper {
     }
     
     func skillSort (students: Array<Student>) {
-            students.sorted(by: { $0.totalPoints < $1.totalPoints })
+            students.sorted(by: { $0.totalPoints > $1.totalPoints })
     }
     
     
