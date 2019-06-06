@@ -21,12 +21,13 @@ class Student {
     var groups: Array<Group> = Array<Group>()
     
     // MARK: Initialisers
-    init(fullName: String, preferredName:String, studentId: String) {
+    init(fullName: String, preferredName:String, studentId: String, assignmentExpectation: String,skills: [Skill]) {
         self.fullName = fullName
         self.preferredName = preferredName
         self.studentId = studentId
         self.totalPoints = 0 //by default the student rates 0 points in an assignment
-        self.assignmentExpectation = "P" //by default the student's expectation is Passs in an assignment
+        self.assignmentExpectation = assignmentExpectation //by default the student's expectation is Passs in an assignment
+        self.skills = skills
     }
     
     //MARK: Functions

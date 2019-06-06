@@ -46,7 +46,9 @@ class PeopleViewController: UIViewController, UITableViewDataSource, UITableView
         if let assignment = currentAssignment {
             listStudents = assignment.students
             
-            //Do sorting/ removal of students based on algo here:
+            //Do sorting/ removal of students based on algo here
+            
+            
             // Ensure to remove current user (morgan) and those already in a group
             
         }
