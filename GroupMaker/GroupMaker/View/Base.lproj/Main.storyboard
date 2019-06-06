@@ -141,7 +141,7 @@
                         <color key="backgroundColor" red="0.9100688099861145" green="0.91406160593032837" blue="0.92106229066848755" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <viewLayoutGuide key="safeArea" id="ecg-d1-iAK"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="My groups" image="home-icon.png" id="DX8-oz-NiL"/>
+                    <tabBarItem key="tabBarItem" title="My groups" image="groups-icon" id="DX8-oz-NiL"/>
                     <connections>
                         <outlet property="CreateGroupBtn" destination="yUV-zb-grp" id="gp1-FO-TDH"/>
                         <outlet property="GroupTableView" destination="Xfx-rP-J0Q" id="dus-2c-p0H"/>
@@ -634,6 +634,149 @@
             </objects>
             <point key="canvasLocation" x="-291.304347826087" y="1645.9821428571429"/>
         </scene>
+        <!--Title-->
+        <scene sceneID="9tk-p4-Mmg">
+            <objects>
+                <viewController id="QZV-EM-6sq" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="U5r-1T-oQ4">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Skills" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eBf-2E-jff">
+                                <rect key="frame" x="151" y="78" width="112" height="46"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="Chalkduster" family="Chalkduster" pointSize="36"/>
+                                <color key="textColor" red="0.19168648120000001" green="0.21094739439999999" blue="0.2186900973" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="What skills do you have?" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="N1C-eH-uDj">
+                                <rect key="frame" x="76" y="197" width="263" height="26"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="Verdana" family="Verdana" pointSize="21"/>
+                                <color key="textColor" red="0.19168648120000001" green="0.21094739439999999" blue="0.2186900973" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="a5s-5L-asP">
+                                <rect key="frame" x="98" y="251" width="219" height="91"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="PM" image="pm">
+                                    <color key="titleColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4PT-GI-cGa">
+                                <rect key="frame" x="109" y="359" width="212" height="105"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="SD" image="sd">
+                                    <color key="titleColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Oq2-WL-8kB">
+                                <rect key="frame" x="98" y="472" width="219" height="100"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="UI" image="ui">
+                                    <color key="titleColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="g9A-c7-GUD">
+                                <rect key="frame" x="102" y="591" width="211" height="95"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="AS" image="as">
+                                    <color key="titleColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qao-ZS-rGX">
+                                <rect key="frame" x="109" y="707" width="228" height="98"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="ADD" image="add">
+                                    <color key="titleColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" red="0.91006880999999995" green="0.91406160589999996" blue="0.92106229070000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <viewLayoutGuide key="safeArea" id="lVM-fs-hpr"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="Title" id="ZIl-g8-N1T"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="4fl-fD-AMo" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-5170" y="925"/>
+        </scene>
+        <!--Assignments View Controller-->
+        <scene sceneID="zfm-Sv-6sb">
+            <objects>
+                <viewController id="kz6-Ga-QiK" customClass="AssignmentsViewController" customModule="GroupMaker" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="fbg-sI-2nZ">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Skills" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2wO-kd-513">
+                                <rect key="frame" x="151" y="70" width="112" height="46"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="Chalkduster" family="Chalkduster" pointSize="36"/>
+                                <color key="textColor" red="0.19168648120000001" green="0.21094739439999999" blue="0.2186900973" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Please select an assignment" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bCT-Fp-wHS">
+                                <rect key="frame" x="65" y="195" width="298" height="26"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="Verdana" family="Verdana" pointSize="21"/>
+                                <color key="textColor" red="0.19168648120000001" green="0.21094739439999999" blue="0.2186900973" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mb4-xy-XYe">
+                                <rect key="frame" x="47" y="623" width="335" height="79"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="LANS" image="lans">
+                                    <color key="titleColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9Ye-uu-V8K">
+                                <rect key="frame" x="57" y="428" width="371" height="77"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="DATABASE" image="database">
+                                    <color key="titleColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3Tp-ir-EjJ">
+                                <rect key="frame" x="71" y="526" width="343" height="70"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="DESIGN" image="design">
+                                    <color key="titleColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="aZa-U7-FkM">
+                                <rect key="frame" x="46" y="325" width="314" height="81"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="IOS" image="iOS">
+                                    <color key="titleColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <connections>
+                                    <segue destination="QZV-EM-6sq" kind="popoverPresentation" popoverAnchorView="aZa-U7-FkM" id="B9B-9B-Gf9">
+                                        <popoverArrowDirection key="popoverArrowDirection" up="YES" down="YES" left="YES" right="YES"/>
+                                    </segue>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="KSX-bs-8UD">
+                                <rect key="frame" x="190" y="790" width="50" height="38"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="Verdana" family="Verdana" pointSize="21"/>
+                                <state key="normal" title="back">
+                                    <color key="titleColor" red="0.19215686269999999" green="0.21176470589999999" blue="0.21960784310000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="backButtonTouched:" destination="kz6-Ga-QiK" eventType="touchUpInside" id="uWy-Fa-xnU"/>
+                                    <action selector="saveBtnPressed:" destination="hhm-77-O9z" eventType="touchUpInside" id="dzu-O3-GRy"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" red="0.91006880999999995" green="0.91406160589999996" blue="0.92106229070000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <viewLayoutGuide key="safeArea" id="D97-Af-3DX"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="6d8-vC-jGt" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-4390" y="925"/>
+        </scene>
         <!--My profile-->
         <scene sceneID="gxB-VK-z0b">
             <objects>
@@ -694,18 +837,21 @@
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="aHA-jS-wPI">
                                 <rect key="frame" x="52" y="662" width="379" height="70"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="INTERESTS" image="interests-button.png">
+                                <state key="normal" title="INTERESTS" image="interests-button">
                                     <color key="titleColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ceC-Hu-SjO">
                                 <rect key="frame" x="45" y="581" width="349" height="68"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="SKILLS" image="skills-button.png">
+                                <state key="normal" title="SKILLS" image="skills-button">
                                     <color key="titleColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
+                                <connections>
+                                    <segue destination="kz6-Ga-QiK" kind="show" id="nNJ-Jc-JTp"/>
+                                </connections>
                             </button>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="profile-pic.jpg" translatesAutoresizingMaskIntoConstraints="NO" id="UvO-A8-kme">
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="profile-pic" translatesAutoresizingMaskIntoConstraints="NO" id="UvO-A8-kme">
                                 <rect key="frame" x="107" y="136" width="200" height="200"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
@@ -724,7 +870,7 @@
                         <color key="backgroundColor" red="0.9100688099861145" green="0.91406160593032837" blue="0.92106229066848755" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <viewLayoutGuide key="safeArea" id="amz-tB-fuF"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="My profile" image="profile-icon.png" id="fif-B0-DAk"/>
+                    <tabBarItem key="tabBarItem" tag="1" title="My profile" image="profile-icon" id="fif-B0-DAk"/>
                     <connections>
                         <outlet property="textFullName" destination="h30-D5-g2B" id="3JE-El-xt5"/>
                         <outlet property="textPrefferedName" destination="nMj-pj-K2U" id="C8C-kL-vth"/>
@@ -755,12 +901,21 @@
         </scene>
     </scenes>
     <resources>
+        <image name="add" width="191" height="98"/>
+        <image name="as" width="188" height="95"/>
+        <image name="database" width="283" height="77"/>
+        <image name="design" width="278" height="70"/>
+        <image name="groups-icon" width="48" height="48"/>
         <image name="groups-icon.png" width="36" height="36"/>
-        <image name="home-icon.png" width="36" height="36"/>
-        <image name="interests-button.png" width="285" height="70"/>
-        <image name="profile-icon.png" width="36" height="36"/>
-        <image name="profile-pic.jpg" width="1910" height="1910"/>
-        <image name="skills-button.png" width="291" height="68"/>
+        <image name="iOS" width="285" height="81"/>
+        <image name="interests-button" width="285" height="70"/>
+        <image name="lans" width="289" height="79"/>
+        <image name="pm" width="192" height="91"/>
+        <image name="profile-icon" width="48" height="48"/>
+        <image name="profile-pic" width="1910" height="1910"/>
+        <image name="sd" width="188" height="105"/>
+        <image name="skills-button" width="291" height="68"/>
+        <image name="ui" width="201" height="100"/>
     </resources>
     <inferredMetricsTieBreakers>
         <segue reference="AQ1-ZO-URJ"/>
