@@ -24,8 +24,14 @@ class Helper {
         }
     }
     
+    func skillSort (students: Array<Student>) -> Array<Student> {
+            return students.sorted(by: { $0.totalPoints > $1.totalPoints })
+    }
+    
+    
+    
     //ExpectationSort is for putting together the students with same expected mark
-    func expectationSort(students: Array<Student>) {
+    func expectationSort(students: Array<Student>) -> Array<Student> {
         var studentArray = students
         //Get students of each expectation together
         for index in 0...studentArray.count - 1 {
@@ -55,6 +61,8 @@ class Helper {
                 studentArray.remove(at: index)
             }
         }
+        
+        return studentArray
     }
     
     static func getGroups() -> Array<Group> {
@@ -92,7 +100,11 @@ class Helper {
             Student(fullName: "Peter Smith", preferredName: "Pete", studentId: "12345678", assignmentExpectation: "C",  skills: [Skill(skillId: "10002", skillName: "UI Design", skillPoint: 5)]),
             Student(fullName: "Gloria Han", preferredName: "Gloria", studentId: "87654321", assignmentExpectation: "D",  skills: [Skill(skillId: "10003", skillName: "Project Management", skillPoint: 15), Skill(skillId: "10001", skillName: "Graphic design", skillPoint: 5)]),
             Student(fullName: "Henry Wann", preferredName: "Hen Hen", studentId: "51235671", assignmentExpectation: "P",  skills: [Skill(skillId: "10004", skillName: "Graphic design", skillPoint: 5)]),
-            Student(fullName: "Leonard Cass", preferredName: "Cass", studentId: "64321577", assignmentExpectation: "C",  skills: [Skill(skillId: "10001", skillName: "iOS programing", skillPoint: 10), Skill(skillId: "10004", skillName: "Graphic design", skillPoint: 5)])
+            Student(fullName: "Leonard Cass", preferredName: "Cass", studentId: "64321577", assignmentExpectation: "C",  skills: [Skill(skillId: "10001", skillName: "iOS programing", skillPoint: 10), Skill(skillId: "10004", skillName: "Graphic design", skillPoint: 5)]),
+            Student(fullName: "Alex Lee", preferredName: "Alex", studentId: "12121212", assignmentExpectation: "HD",  skills: [Skill(skillId: "10001", skillName: "iOS programing", skillPoint: 10), Skill(skillId: "10005", skillName: "Reporting writing", skillPoint: 10)]),
+            Student(fullName: "Clare Jackman", preferredName: "Clare", studentId: "12030405", assignmentExpectation: "D",  skills: [Skill(skillId: "10002", skillName: "UI Design", skillPoint: 5), Skill(skillId: "10003", skillName: "Project Management", skillPoint: 15)]),
+            Student(fullName: "Joris Donald", preferredName: "Jo", studentId: "12030599", assignmentExpectation: "C",  skills: [Skill(skillId: "10002", skillName: "UI Design", skillPoint: 5)]),
+            Student(fullName: "Lara Thomas", preferredName: "Lara", studentId: "90030405", assignmentExpectation: "C",  skills: [Skill(skillId: "10003", skillName: "Project Management", skillPoint: 15)])
         ]
     }
 }

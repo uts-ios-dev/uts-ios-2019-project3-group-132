@@ -36,6 +36,8 @@ class ProfileViewController: UIViewController, UITableViewDelegate, UITableViewD
             studentNumberLbl.text = "Student Number: \(profile.studentId)"
             fullNameLbl.text = "Full Name: \(profile.fullName)"
         }
+        
+        skillsTableView.dataSource = self
     }
     
     // MARK: TableView Functions
@@ -44,8 +46,17 @@ class ProfileViewController: UIViewController, UITableViewDelegate, UITableViewD
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        // TODO:
-        return UITableViewCell.init()
+        var cellToReturn = UITableViewCell()
+        if tableView == skillsTableView {
+            let cell = skillsTableView.dequeueReusableCell(withIdentifier: "cellSkill", for: indexPath)
+            
+            let skill = currentProfile?.skills[indexPath.row]
+            cell.textLabel?.text = skill?.skillName
+            
+            cellToReturn = cell
+        }
+        
+        return cellToReturn
     }
     
 
